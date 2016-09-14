@@ -9,5 +9,5 @@
     <warLocation></warLocation>
     <extraInfo></extraInfo>
     <mavenClasspath>false</mavenClasspath>
-    <webPath>/TD1</webPath>
+    <webPath>/MesTD</webPath>
 </tomcatProjectProperties>
