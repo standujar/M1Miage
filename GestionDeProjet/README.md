@@ -1,6 +1,3 @@
-# M1Miage
-Espace M1Miage de :
+# Gestion De Projet
+Espace pour l'UE Gestion de Projet
 
--Stan Andujar
-<br>-Maxime Callebert
-<br>-Benabdelhak Chaimae
