@@ -17,7 +17,7 @@ public class ServletTxt extends HttpServlet {
 		resp.setContentType("text/html");
 		out = resp.getWriter();
 		out.println("<html>");
-		out.println("<head><title>Test de servlet texte</title></head>");
+		out.println("<head><title>Test de servlet</title></head>");
 		out.println("<body>");
 		out.println("<i>Test</i> Servlet <u>affichage de <b>text</b></u>");
 		out.println("</body>");
