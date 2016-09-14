@@ -16,15 +16,5 @@
 	<servlet-mapping> 
 		<servlet-name>ServletTxt</servlet-name>
 		<url-pattern>/txt</url-pattern> 
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>AfficherPersonnes</servlet-name> 
-		<servlet-class>mesServlets.AfficherPersonnes</servlet-class> 
-		<description>Servlet d'essai AfficherPersonnes</description> 
-	</servlet>
-	<servlet-mapping> 
-		<servlet-name>AfficherPersonnes</servlet-name>
-		<url-pattern>/affp</url-pattern> 
 	</servlet-mapping>	
 </web-app>

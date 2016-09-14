@@ -1,0 +1,7 @@
+package mesServlets;
+
+import javax.servlet.http.HttpServlet;
+
+public class AfficherPersonnes extends HttpServlet {
+
+}
