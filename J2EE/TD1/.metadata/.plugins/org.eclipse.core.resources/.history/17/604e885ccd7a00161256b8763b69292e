@@ -1,0 +1,14 @@
+package client;
+
+import javax.swing.JApplet;
+
+public class AppletRecherche extends JApplet {
+
+	/**
+	 * Create the applet.
+	 */
+	public AppletRecherche() {
+
+	}
+
+}

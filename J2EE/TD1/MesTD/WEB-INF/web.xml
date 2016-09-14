@@ -6,7 +6,7 @@
 <web-app>
     <display-name>Mes servlets</display-name>
     <description>
-      Premières servlets
+      Premieres servlets
     </description>
 	<servlet>
 		<servlet-name>ServletTxt</servlet-name> 
@@ -26,5 +26,15 @@
 	<servlet-mapping> 
 		<servlet-name>AfficherPersonnes</servlet-name>
 		<url-pattern>/affp</url-pattern> 
-	</servlet-mapping>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ServletRequete</servlet-name> 
+		<servlet-class>mesServlets.ServletRequete</servlet-class> 
+		<description>Servlet d'essai de Recherche</description> 
+	</servlet>
+	<servlet-mapping> 
+		<servlet-name>ServletRequete</servlet-name>
+		<url-pattern>/req</url-pattern> 
+	</servlet-mapping>
 </web-app>
