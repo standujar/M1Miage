@@ -1,0 +1,14 @@
+package projet_tetris;
+
+import javax.swing.JApplet;
+
+public class Applet_Teetris extends JApplet {
+
+	/**
+	 * Create the applet.
+	 */
+	public Applet_Teetris() {
+
+	}
+
+}
