@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+    <display-name>Mes servlets</display-name>
+    <description>
+      Premieres servlets
+    </description>
+	<servlet>
+		<servlet-name>ServletTxt</servlet-name> 
+		<servlet-class>mesServlets.ServletTxt</servlet-class> 
+		<description>Servlet d'essai</description> 
+	</servlet>
+	<servlet-mapping> 
+		<servlet-name>ServletTxt</servlet-name>
+		<url-pattern>/txt</url-pattern> 
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AfficherPersonnes</servlet-name> 
+		<servlet-class>mesServlets.AfficherPersonnes</servlet-class> 
+		<description>Servlet d'essai AfficherPersonnes</description> 
+	</servlet>
+	<servlet-mapping> 
+		<servlet-name>AfficherPersonnes</servlet-name>
+		<url-pattern>/affp</url-pattern> 
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ServletRequete</servlet-name> 
+		<servlet-class>mesServlets.ServletRequete</servlet-class> 
+		<description>Servlet d'essai de Recherche</description> 
+	</servlet>
+	<servlet-mapping> 
+		<servlet-name>ServletRequete</servlet-name>
+		<url-pattern>/req</url-pattern> 
+	</servlet-mapping>
+</web-app>
