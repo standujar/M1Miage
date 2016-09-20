@@ -46,11 +46,23 @@
 			  
 			  
 	<!-- JNDI de la base test -->
-	<Resource name="Tetris" 
+	<Resource name="MaBase" 
 		type="javax.sql.DataSource" 
 		password="" 
 		driverClassName="com.mysql.jdbc.Driver" 
 		maxIdle="2" 
+		maxWait="500" 
+		username="root" 
+		url="jdbc:mysql://localhost/test?autoReconnect=true&amp;useSSL=false" 
+		maxActive="500"
+	/>
+	
+	<!-- JNDI de la base Tetris -->
+	<Resource name="Tetris" 
+		type="javax.sql.DataSource" 
+		password="" 
+		driverClassName="com.mysql.jdbc.Driver" 
+		maxIdle="1" 
 		maxWait="500" 
 		username="root" 
 		url="jdbc:mysql://localhost/tetris?autoReconnect=true&amp;useSSL=false" 

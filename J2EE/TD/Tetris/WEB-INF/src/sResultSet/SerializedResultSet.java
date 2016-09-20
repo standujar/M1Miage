@@ -1,4 +1,4 @@
-package sResultSet;
+package SResultSet;
 
 /**A duplicate of java.sql.ResultSet which can be used in place of java.sql.ResultSet when using RMI.*/
 public class SerializedResultSet implements java.io.Serializable {

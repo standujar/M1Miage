@@ -1,0 +1,14 @@
+package projet_tetris;
+
+import javax.swing.JApplet;
+
+public class PanneauScore extends JApplet {
+
+	/**
+	 * Create the applet.
+	 */
+	public PanneauScore() {
+
+	}
+
+}

@@ -1,9 +1,9 @@
 <Context path="/Tetris" 
 	reloadable="true" 
-	docBase="C:\Users\Stan\Documents\GitHub\M1Miage\J2EE\TD\Tetris" 
-	workDir="C:\Users\Stan\Documents\GitHub\M1Miage\J2EE\TD\Tetris\work" >
+	docBase="C:\Users\stanislasandujar\Documents\GitHub\M1Miage\J2EE\TD\Tetris" 
+	workDir="C:\Users\stanislasandujar\Documents\GitHub\M1Miage\J2EE\TD\Tetris\work" >
 	<ResourceLink
-        name="Tetris"
-        global="Tetris"
-        type="javax.sql.DataSource"/>
+		name="Tetris"
+		global="Tetris"
+		type="javax.sql.DataSource"/>
 </Context>

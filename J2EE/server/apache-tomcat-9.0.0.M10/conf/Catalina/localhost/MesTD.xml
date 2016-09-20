@@ -1,9 +1,0 @@
-<Context path="/MesTD" 
-	reloadable="true" 
-	docBase="C:\Users\Stan\Documents\GitHub\M1Miage\J2EE\TD\MesTD" 
-	workDir="C:\Users\Stan\Documents\GitHub\M1Miage\J2EE\TD\MesTD\work" >
-	<ResourceLink
-        name="MaBase"
-        global="MaBase"
-        type="javax.sql.DataSource"/>
-</Context>

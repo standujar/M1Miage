@@ -1,4 +1,4 @@
-package sResultSet;
+package SResultSet;
 
 /**This class may be used in place of Hashtable.*/
 public class XList extends java.util.Hashtable implements java.io.Serializable
