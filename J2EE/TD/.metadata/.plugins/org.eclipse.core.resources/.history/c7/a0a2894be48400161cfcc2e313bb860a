@@ -1,0 +1,7 @@
+package projet_tetris;
+
+import javax.servlet.http.HttpServlet;
+
+public class ServletUpdate extends HttpServlet {
+
+}

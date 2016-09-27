@@ -1,11 +1,11 @@
-#Mon Sep 26 21:03:38 CEST 2016
+#Tue Sep 27 20:51:09 CEST 2016
 vl=How many times the 'Finish' button pressed during the day
 l=Wizard class name
 ct=jbt
-d=1474916618632
+d=1475002269944
 c=0
 cmp=usage
 a=finishWizard
 cl=net.sf.eclipse.tomcat.TomcatProjectCreationWizard
 v=2.2.1
-s=1
+s=0
