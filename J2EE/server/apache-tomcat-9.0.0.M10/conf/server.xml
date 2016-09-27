@@ -62,7 +62,7 @@
 		type="javax.sql.DataSource" 
 		password="" 
 		driverClassName="com.mysql.jdbc.Driver" 
-		maxIdle="1" 
+		maxIdle="3"
 		maxWait="500" 
 		username="root" 
 		url="jdbc:mysql://localhost/tetris?autoReconnect=true&amp;useSSL=false" 

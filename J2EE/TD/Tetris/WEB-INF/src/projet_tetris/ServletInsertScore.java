@@ -17,29 +17,62 @@ import javax.sql.DataSource;
 
 public class ServletInsertScore extends HttpServlet {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private DataSource ds;
 	Connection BD;
+	Joueur nouveauJoueur = new Joueur(null, 0, 0);
+
 	
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
 		try{
+			// Récupération du flux d'entrée envoyé par l'applet
 			ObjectInputStream entree = new ObjectInputStream(request.getInputStream());
-			Joueur new_joueur = null;
-			new_joueur=(Joueur)entree.readObject();
-			ObjectOutputStream sortie = new ObjectOutputStream(response.getOutputStream()); 
-			BD=ds.getConnection();
-			Statement s = BD.createStatement();
-			System.out.println(new_joueur.getNom());
-			System.out.println(new_joueur.getNiveau());
-			System.out.println(new_joueur.getScore());
-			s.executeUpdate("INSERT INTO `score`(`id_joueur`, `nom`, `score`, `niveau`) VALUES (null , '"+new_joueur.getNom()+"' , "+new_joueur.getScore()+", "+new_joueur.getNiveau()+")");
-			s.executeUpdate("DELETE FROM score ORDER BY score ASC LIMIT 1");
+			nouveauJoueur=(Joueur)entree.readObject();
+			// Préparation du flux de sortie
+			ObjectOutputStream sortie = new ObjectOutputStream(response.getOutputStream());
+			// Execution de la requête
+			ExecuterRequete();
+			
+			
 			sortie.writeObject(null);
 		}
 		 catch (Exception ex){
 		      System.out.println("Erreur d'exécution de la requête SQL (insert) : " + ex);
 		 }       
 	}
+
+synchronized void ExecuterRequete()
+{
+	try
+	{
+		// Exécution de la requête
+		BD=ds.getConnection();
+		Statement s = BD.createStatement();
+		//Déclaration d'un objet Joueur et d'un Vector pour stocker les 5 joueurs de la DB
+		System.out.println("Insertion "+nouveauJoueur.getNom()+" "+nouveauJoueur.getNiveau()+" "+nouveauJoueur.getScore());
+		ResultSet r=s.executeQuery("select id_joueur, min(score) AS minscore from score group by score");
+		
+		r.next();
+		int val = r.getInt("id_joueur");
+		
+		s.executeUpdate("UPDATE score SET nom='"+nouveauJoueur.getNom()+"', score='"+nouveauJoueur.getScore()+"', niveau='"+nouveauJoueur.getNiveau()+"' WHERE id_joueur="+val+"");	
+
+		r.close();
+		s.close();
+		BD.close();
+		s = null;
+		r = null;
+	
+
+	}
+	catch (java.sql.SQLException ex) {
+			System.out.println("Erreur d'exécution de la requéte SQL \n"+ex);
+	}
+}
 	
 	public void init() throws ServletException{
 	    try{

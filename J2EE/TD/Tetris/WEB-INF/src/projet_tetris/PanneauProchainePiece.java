@@ -14,7 +14,11 @@ import javax.swing.*;
  */
 
 public class PanneauProchainePiece extends JPanel{
-  // Nombre de colonnes et de lignes
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+// Nombre de colonnes et de lignes
   int Lignes = 5;
   int Colonnes = 5;
   // Taille d'une case dans l'affichage du tableau tetris

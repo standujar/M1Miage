@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Vector;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -17,13 +18,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
-import SResultSet.SerializedResultSet;
-
 public class ServletUpdate extends HttpServlet {
 
 	private DataSource ds;
 	Connection BD;
-	SerializedResultSet sresultat;
+	Vector<Joueur> resultat = null;
 	static int nbLignes;
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -34,40 +33,42 @@ public class ServletUpdate extends HttpServlet {
 			// Préparation du flux de sortie
 			ObjectOutputStream sortie = new ObjectOutputStream(response.getOutputStream());
 			// Execution de la requête
-			this.sresultat = ExecuterRequete();
+			this.resultat = ExecuterRequete();
 			// Envoi du résultat au client
-			sortie.writeObject(sresultat);
+			sortie.writeObject(resultat);
 		}
 		 catch (Exception ex){
 		      System.out.println("Erreur d'exécution de la requête SQL (doPost) : " + ex);
 		 }       
 	}
 	
-	public SerializedResultSet ExecuterRequete()
+	public Vector<Joueur> ExecuterRequete()
 	{
 		try
 		{
 			// Exécution de la requête
 			BD=ds.getConnection();
 			Statement s = BD.createStatement();
+			//Déclaration d'un objet Joueur et d'un Vector pour stocker les 5 joueurs de la DB
+			Joueur mesJoueurs = new Joueur(null, 0, 0);
+			Vector<Joueur> resultat = new Vector<Joueur>();
 			ResultSet r = s.executeQuery("select * from score order by score desc limit 5");
 			// Transformation du ResultSet en sResultSet
-			java.sql.ResultSetMetaData columnNames = r.getMetaData();
-			SResultSet.SerializedResultSet sResultSet = new SResultSet.SerializedResultSet();
-		for (int i = 1; i <= columnNames.getColumnCount(); i++) {
-			sResultSet.addColumn(columnNames.getColumnName(i), i);
+			
+			while(r.next()){
+				mesJoueurs = new Joueur(null, 0, 0);
+				mesJoueurs.setNom(r.getString("nom")); 
+				mesJoueurs.setNiveau(r.getInt("niveau"));
+				mesJoueurs.setScore(r.getInt("score"));
+				resultat.add(r.getRow()-1,mesJoueurs);
 			}
-			while (r.next()) {
-				for (int column = 1; column <= columnNames.getColumnCount(); column++) {
-				sResultSet.addColumnData(column, r.getObject(column));
-				}
-			}
+			
 			r.close();
 			s.close();
 			BD.close();
 			s = null;
 			r = null;
-			return sResultSet;
+			return resultat;
 		}
 		catch (java.sql.SQLException ex) {
 				System.out.println("Erreur d'exécution de la requéte SQL \n"+ex);

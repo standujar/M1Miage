@@ -4,8 +4,6 @@ import java.awt.*;
 
 import javax.swing.*;
 
-import SResultSet.SerializedResultSet;
-
 import java.awt.event.*;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -26,8 +24,7 @@ import java.util.Vector;
 
 public class PanneauScore  extends JDialog
 {
-  
-  Joueur[] mesJoueurs = null;
+	Vector<Joueur> mesJoueurs;
 // Nombre de joueurs classés dans le panneau des meilleurs scores
   int NbJoueurs = 5;
   // Tableau contenant le nom des 5 meilleurs joueurs
@@ -176,7 +173,7 @@ public class PanneauScore  extends JDialog
                                       "Félicitations!!!!",
                                       JOptionPane.INFORMATION_MESSAGE);
 
-        Joueur monJoueur = new Joueur(reponse, Score, Niveau);
+        Joueur monJoueur = new Joueur(reponse,Score,Niveau);
         INSERT_Score(monJoueur);
         MAJ_Panneau();
         break;
@@ -233,8 +230,7 @@ public class PanneauScore  extends JDialog
 	      ObjectOutputStream fluxsortie = new ObjectOutputStream(connexion.getOutputStream());
 	      fluxsortie.writeObject(null);
 	      ObjectInputStream fluxentree = new ObjectInputStream(connexion.getInputStream());
-	      SerializedResultSet sresultat=(SerializedResultSet) fluxentree.readObject();
-	      sresultat.first();
+	      Vector<Joueur> resultat=(Vector<Joueur>) fluxentree.readObject();
 	      
 	      URL url2 = new URL("http://localhost:8080/Tetris/RecupTaille");
 	      URLConnection connexion2 = url2.openConnection();
@@ -244,16 +240,11 @@ public class PanneauScore  extends JDialog
 	      ObjectInputStream fluxentree2 = new ObjectInputStream(connexion2.getInputStream());
 	      int staille= (int) fluxentree2.readObject();
 	      
-	      mesJoueurs = new Joueur[staille];
-	      for (int i=0; i<staille;i++)
-			{
-	    	  	mesJoueurs[i]= new Joueur(sresultat.getString("nom"),sresultat.getInt("score"),sresultat.getInt("niveau"));
-	    	  	sresultat.next();
-			}
-	        for (int j = 0; j < mesJoueurs.length; j++){
-	        	BestJoueurs[j]= mesJoueurs[j].getNom();
-	        	Attributs[j][0] = mesJoueurs[j].getNiveau();
-		        Attributs[j][1] = mesJoueurs[j].getScore();
+	 
+	       for (int j = 0; j < staille; j++){
+	        	BestJoueurs[j]= ((Joueur)resultat.get(j)).getNom();
+	        	Attributs[j][0] = ((Joueur)resultat.get(j)).getNiveau();
+		        Attributs[j][1] = ((Joueur)resultat.get(j)).getScore();
 		        
 		        this.LabelNom[j].setText(BestJoueurs[j]);
 		        this.LabelNiveau[j].setText(Integer.toString(Attributs[j][0]));

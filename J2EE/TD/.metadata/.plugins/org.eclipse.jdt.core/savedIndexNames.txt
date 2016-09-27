@@ -1,7 +1,6 @@
 INDEX VERSION 1.129+C:\Users\stanislasandujar\Documents\GitHub\M1Miage\J2EE\TD\.metadata\.plugins\org.eclipse.jdt.core
 2484288276.index
 3130810665.index
-3156457918.index
 3725742166.index
 3503675850.index
 255942676.index

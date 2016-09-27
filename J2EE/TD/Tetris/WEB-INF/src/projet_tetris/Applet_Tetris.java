@@ -7,6 +7,8 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.swing.BorderFactory;
 import javax.swing.JApplet;
@@ -27,7 +29,11 @@ import javax.swing.border.Border;
  */
 
 public class Applet_Tetris extends JApplet implements Runnable{
-  // Panneau qui recouvre tout l'applet
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+// Panneau qui recouvre tout l'applet
   JPanel FenetrePrincipale = new JPanel();
   // Etiquette destinée à afficher "Score" sur l'interface
   JLabel LabelScore = new JLabel();
@@ -68,8 +74,6 @@ public class Applet_Tetris extends JApplet implements Runnable{
   // Panneau des meilleurs scores
   PanneauScore PS = new PanneauScore();
 
-
-
   // Initialisation de l'applet
   public void init() {
     try {
@@ -79,8 +83,6 @@ public class Applet_Tetris extends JApplet implements Runnable{
       e.printStackTrace();
     }
   }
-
-
 
   // Initialiser le composant
   private void jbInit() throws Exception {
@@ -198,8 +200,6 @@ public class Applet_Tetris extends JApplet implements Runnable{
    PPP.AfficheNextPiece(NextPiece);
   }
 
-
-
   // Méthode start de l'applet
   public void start()
   {
@@ -208,18 +208,15 @@ public class Applet_Tetris extends JApplet implements Runnable{
    BtnNouvPartie.setEnabled(true);
   }
 
-
-
   // Méthode stop de l'applet
   public void stop()
   {
     GestionJeu = null;
   }
 
-
-
   // Méthode décrivant le déroulement d'une partie de tétris
-  public void run()
+  @SuppressWarnings("deprecation")
+public void run()
   {
     while(GestionJeu!=null)
     {
@@ -290,15 +287,15 @@ public class Applet_Tetris extends JApplet implements Runnable{
     }
   }
 
-
-
   // Méthode exécutée lorsque le joueur clique sur le bouton
   // "Nouvelle Partie"
-  void BtnNouvPartie_actionPerformed(ActionEvent e) {
+  @SuppressWarnings("deprecation")
+void BtnNouvPartie_actionPerformed(ActionEvent e) {
     // Si une partie (ou processus) est en cours
     if(GestionJeu != null)
        // Arrêt de la partie
        GestionJeu.stop();
+    	MAJauto();
     // Création d'une nouvelle partie
     GestionJeu = new Thread(this);
     // Réinitialisation de l'interface et des panneaux
@@ -316,8 +313,6 @@ public class Applet_Tetris extends JApplet implements Runnable{
     // Début de la partie
     GestionJeu.start();
   }
-
-
 
   // Méthode exécutée lorsque le joueur clique sur le bouton
   // "Pause"
@@ -353,8 +348,20 @@ public class Applet_Tetris extends JApplet implements Runnable{
     }
   }
 
+void MAJauto(){
+  long temps = 3000;                      // délai avant de répéter la tache : 2000 = 2  seconde
+  long startTime = 1000;                    // délai avant la mise en route (0 demarre immediatement)
+  Timer timer = new Timer();             // création du timer
+  TimerTask tache = new TimerTask() {     // création et spécification de la tache à effectuer
+      @Override
+          public void run() {
+              PS.MAJ_Panneau();// ici se qui doit être effectué
+          }
+  };
+  timer.scheduleAtFixedRate(tache,startTime,temps);  // ici on lance la mecanique
 
-
+  }
+  
   // Méthode exécutée lorsque le joueur clique sur le bouton
   // "Options"
   void BtnOptions_actionPerformed(ActionEvent e) {
@@ -363,18 +370,15 @@ public class Applet_Tetris extends JApplet implements Runnable{
                                 JOptionPane.INFORMATION_MESSAGE);
   }
 
-
-
   // Méthode exécutée lorsque le joueur clique sur le bouton
   // "Meilleurs Scores"
-  void BtnScore_actionPerformed(ActionEvent e) {
+  @SuppressWarnings("deprecation")
+void BtnScore_actionPerformed(ActionEvent e) {
      PS.setModal(true);
      PS.pack();
      PS.show();
      PS.MAJ_Panneau();
-  }
-}
-
+  }}
 
 class Applet_Tetris_BtnNouvPartie_actionAdapter implements java.awt.event.ActionListener {
   Applet_Tetris adaptee;
@@ -382,10 +386,10 @@ class Applet_Tetris_BtnNouvPartie_actionAdapter implements java.awt.event.Action
   Applet_Tetris_BtnNouvPartie_actionAdapter(Applet_Tetris adaptee) {
     this.adaptee = adaptee;
   }
+  
   public void actionPerformed(ActionEvent e) {
     adaptee.BtnNouvPartie_actionPerformed(e);
-  }
-}
+  }}
 
 class Applet_Tetris_BtnPause_actionAdapter implements java.awt.event.ActionListener {
   Applet_Tetris adaptee;
@@ -393,10 +397,10 @@ class Applet_Tetris_BtnPause_actionAdapter implements java.awt.event.ActionListe
   Applet_Tetris_BtnPause_actionAdapter(Applet_Tetris adaptee) {
     this.adaptee = adaptee;
   }
+  
   public void actionPerformed(ActionEvent e) {
     adaptee.BtnPause_actionPerformed(e);
-  }
-}
+  }}
 
 class Applet_Tetris_BtnOptions_actionAdapter implements java.awt.event.ActionListener {
   Applet_Tetris adaptee;
@@ -404,10 +408,10 @@ class Applet_Tetris_BtnOptions_actionAdapter implements java.awt.event.ActionLis
   Applet_Tetris_BtnOptions_actionAdapter(Applet_Tetris adaptee) {
     this.adaptee = adaptee;
   }
+  
   public void actionPerformed(ActionEvent e) {
     adaptee.BtnOptions_actionPerformed(e);
-  }
-}
+  }}
 
 class Applet_Tetris_BtnScore_actionAdapter implements java.awt.event.ActionListener {
   Applet_Tetris adaptee;
@@ -415,7 +419,8 @@ class Applet_Tetris_BtnScore_actionAdapter implements java.awt.event.ActionListe
   Applet_Tetris_BtnScore_actionAdapter(Applet_Tetris adaptee) {
     this.adaptee = adaptee;
   }
+  
   public void actionPerformed(ActionEvent e) {
     adaptee.BtnScore_actionPerformed(e);
-  }
+  }  
 }

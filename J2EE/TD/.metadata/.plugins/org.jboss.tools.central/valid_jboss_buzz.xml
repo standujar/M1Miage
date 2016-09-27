@@ -2,13 +2,827 @@
 <?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/atom10full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0">
 <title>JBoss Central</title>
 <generator uri="http://tt-rss.org/">Tiny Tiny RSS/1.9</generator>
-<updated>2016-07-25T14:02:46+00:00</updated>
+<updated>2016-07-30T01:26:51+00:00</updated>
 <id>http://tiny-man.rhcloud.com/public.php?op=rss&amp;id=1&amp;key=b0143615132bd9efc4e83ba42a5574f6ab939b28</id>
 
 
 <link href="http://tiny-man.rhcloud.com" rel="alternate" />
 
 <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://feeds.feedburner.com/jbossbuzz" /><feedburner:info uri="jbossbuzz" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><entry>
+	<id>https://developer.jboss.org/blogs/weekly-editorial/2016/09/24/this-week-in-jboss-september-24-2016</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/JJ5tMncYpuE/this-week-in-jboss-september-24-2016" rel="alternate" type="text/html" />
+	<title>This Week in JBoss (September 24 2016)</title>
+	<summary type="html"><![CDATA[<!-- [DocumentBodyStart:ea5b1710-844d-4631-ad87-eded6b8859bb] --><div class="jive-rendered-content"><div><div class="paragraph"><p>It&#8217;s been a crazy week for the Java Community as a whole with major announcements happening at JavaOne in San Francisco! Java turned 21 this year! Java SE 9 continues to move closer. Java EE 8, is, well, postponed. The Java community continues to thrive and push out amazing technology, and so do we here at Red Hat!</p></div><div class="paragraph"><p>A number of announcements happened this week you&#8217;ll probably want to be aware of.</p><p style="min-height: 8pt; padding: 0px;">&#160;</p></div><div class="sect1"><h2>News</h2><div class="sectionbody"><div class="paragraph"><p>One of the largest announcements made, at least by Red Hat, was MicroProfile 1.0! A few months back, June to be precise, the MicroProfile was announced. Red Hat, along with IBM, TomiTribe, Payara, and LJC (and SouJava joined since) worked with the community to create a standard around microservices using Java EE. The 1.0 release of MicroProfile finished a few weeks early and there are six different implementations. Read more about MicroProfile at the <a class="jive-link-external-small" href="http://microprofile.io/blog/2016/09/microprofile-at-javaone" rel="nofollow">release blog</a>, or <a class="jive-link-external-small" href="http://planet.jboss.org/post/to_microprofile_1_0_and_beyond" rel="nofollow">Mark Little&#8217;s recap</a>.</p><p style="min-height: 8pt; padding: 0px;">&#160;</p></div><div class="paragraph"><p>Juraci Paix&atilde;o Kr&ouml;hling <a class="jive-link-external-small" href="http://planet.jboss.org/post/using_hawkular_apm_on_red_hat_s_microservices_reference_architecture_example" rel="nofollow">explained</a> how to use Hawkular APM in a microservice architecture earlier in the week. His post is informative and heavy on the details and explanation. Head on over if you fall into this camp and are looking for answers!</p><p style="min-height: 8pt; padding: 0px;">&#160;</p></div><div class="paragraph"><p>This last one may make some of you a bit squeamish, you have been warned. As of Keycloak 2.2.0 the <code>keycloak-server.json</code> stopped being shipped. All configuration is happening within <code>standalone.xml</code>, <code>standalone-ha.xml</code>, or <code>domain.xml</code>. JSON is often a preferred format, but Stan Silvert <a class="jive-link-external-small" href="http://planet.jboss.org/post/keycloak_server_json_rip" rel="nofollow">explained why XML is better in this instance</a> when he wrote about the demise of they <code>keycloak-server.json</code> a few days ago.</p><p style="min-height: 8pt; padding: 0px;">&#160;</p></div></div></div><div class="sect1"><h2>Releases</h2><div class="sectionbody"><div class="paragraph"><p>We&#8217;re always kicking out new releases of our software. Once again, this week was no different. Hibernate had a couple of releases this past week, ORM <a class="jive-link-external-small" href="https://hibernate.atlassian.net/secure/ReleaseNote.jspa?projectId=10031&amp;version=24050" rel="nofollow">5.0.11</a> and <a class="jive-link-external-small" href="https://hibernate.atlassian.net/secure/ReleaseNote.jspa?projectId=10031&amp;version=24051" rel="nofollow">5.1.2</a>. Byteman has a <a class="jive-link-external-small" href="http://planet.jboss.org/post/byteman_4_0_0_alpha_has_been_released" rel="nofollow">4.0.0-Alpha</a> release which allows Byteman to be used on JDK9! Of course, it continues to work on JDK6-8, and there is one small issue, but read the blog for more information. Lastly, <a class="jive-link-external-small" href="http://blog.keycloak.org/2016/09/keycloak-221final-released.html" rel="nofollow">Keycloak 2.2.1.Final</a> was released fixing an issue with the JavaScript adapter released in 2.2.0.</p><p style="min-height: 8pt; padding: 0px;">&#160;</p></div></div></div><div class="sect1"><h2>Events</h2><div class="sectionbody"><div class="paragraph"><p>Besides JavaOne this week, there were some other events we participated in, and some which are going to be happening!</p></div><div class="paragraph"><p>Eric Schabell <a class="jive-link-external-small" href="http://planet.jboss.org/post/red_hat_forum_finland_2016_why_change_why_open_source_why_red_hat_why_now" rel="nofollow">discussed Red Hat Forum going to Finland</a> this year. If you&#8217;re in that area you won&#8217;t want to miss him talking about Open Source, Red Hat and change. There are also some other great speakers lined up for these Red Hat Forums in Europe.</p><p style="min-height: 8pt; padding: 0px;">&#160;</p></div><div class="paragraph"><p>To round out our week, Eric Schabell and Claus Ibsen talked about their talks from this week or a couple of weeks ago. Claus attended JDKIO 2016 in Copenhagen where he discussed Apache Camel and Java based microservices. Read about his trip, or watch the recordings <a class="jive-link-external-small" href="http://planet.jboss.org/post/videos_from_my_two_latest_talks_about_apache_camel_and_developing_java_based_microservices" rel="nofollow">in his blog post</a>.</p><p style="min-height: 8pt; padding: 0px;">&#160;</p></div><div class="paragraph"><p>In London this week, Eric Schabell talked about private cloud at the London JBug. <a class="jive-link-external-small" href="http://planet.jboss.org/post/london_jbug_recap_a_night_of_appdev_and_private_cloud" rel="nofollow">His slides</a> are available for those interested.</p></div><div class="paragraph"><p>Thanks everyone for making this another wonderful week in tech! Stay tuned for more software, talks, and information as time goes on.</p></div></div></div></div><div><div>Last updated 2016-09-24 00:56:35 MDT</div></div></div><!-- [DocumentBodyEnd:ea5b1710-844d-4631-ad87-eded6b8859bb] -->]]></summary>
+	<content type="html">&lt;html&gt;&lt;!-- [DocumentBodyStart:ea5b1710-844d-4631-ad87-eded6b8859bb] --&gt;&lt;body&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;It&amp;rsquo;s been a crazy week for the Java Community as a whole with major announcements happening at JavaOne in San Francisco! Java turned 21 this year! Java SE 9 continues to move closer. Java EE 8, is, well, postponed. The Java community continues to thrive and push out amazing technology, and so do we here at Red Hat!&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;A number of announcements happened this week you&amp;rsquo;ll probably want to be aware of.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;h2&gt;News&lt;/h2&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;One of the largest announcements made, at least by Red Hat, was MicroProfile 1.0! A few months back, June to be precise, the MicroProfile was announced. Red Hat, along with IBM, TomiTribe, Payara, and LJC (and SouJava joined since) worked with the community to create a standard around microservices using Java EE. The 1.0 release of MicroProfile finished a few weeks early and there are six different implementations. Read more about MicroProfile at the &lt;a href="http://microprofile.io/blog/2016/09/microprofile-at-javaone" rel="nofollow" target="_blank"&gt;release blog&lt;/a&gt;, or &lt;a href="http://planet.jboss.org/post/to_microprofile_1_0_and_beyond" rel="nofollow" target="_blank"&gt;Mark Little&amp;rsquo;s recap&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;Juraci Paix&amp;atilde;o Kr&amp;ouml;hling &lt;a href="http://planet.jboss.org/post/using_hawkular_apm_on_red_hat_s_microservices_reference_architecture_example" rel="nofollow" target="_blank"&gt;explained&lt;/a&gt; how to use Hawkular APM in a microservice architecture earlier in the week. His post is informative and heavy on the details and explanation. Head on over if you fall into this camp and are looking for answers!&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;This last one may make some of you a bit squeamish, you have been warned. As of Keycloak 2.2.0 the &lt;code&gt;keycloak-server.json&lt;/code&gt; stopped being shipped. All configuration is happening within &lt;code&gt;standalone.xml&lt;/code&gt;, &lt;code&gt;standalone-ha.xml&lt;/code&gt;, or &lt;code&gt;domain.xml&lt;/code&gt;. JSON is often a preferred format, but Stan Silvert &lt;a href="http://planet.jboss.org/post/keycloak_server_json_rip" rel="nofollow" target="_blank"&gt;explained why XML is better in this instance&lt;/a&gt; when he wrote about the demise of they &lt;code&gt;keycloak-server.json&lt;/code&gt; a few days ago.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;h2&gt;Releases&lt;/h2&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;We&amp;rsquo;re always kicking out new releases of our software. Once again, this week was no different. Hibernate had a couple of releases this past week, ORM &lt;a href="https://hibernate.atlassian.net/secure/ReleaseNote.jspa?projectId=10031&amp;amp;version=24050" rel="nofollow" target="_blank"&gt;5.0.11&lt;/a&gt; and &lt;a href="https://hibernate.atlassian.net/secure/ReleaseNote.jspa?projectId=10031&amp;amp;version=24051" rel="nofollow" target="_blank"&gt;5.1.2&lt;/a&gt;. Byteman has a &lt;a href="http://planet.jboss.org/post/byteman_4_0_0_alpha_has_been_released" rel="nofollow" target="_blank"&gt;4.0.0-Alpha&lt;/a&gt; release which allows Byteman to be used on JDK9! Of course, it continues to work on JDK6-8, and there is one small issue, but read the blog for more information. Lastly, &lt;a href="http://blog.keycloak.org/2016/09/keycloak-221final-released.html" rel="nofollow" target="_blank"&gt;Keycloak 2.2.1.Final&lt;/a&gt; was released fixing an issue with the JavaScript adapter released in 2.2.0.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;h2&gt;Events&lt;/h2&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;Besides JavaOne this week, there were some other events we participated in, and some which are going to be happening!&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;Eric Schabell &lt;a href="http://planet.jboss.org/post/red_hat_forum_finland_2016_why_change_why_open_source_why_red_hat_why_now" rel="nofollow" target="_blank"&gt;discussed Red Hat Forum going to Finland&lt;/a&gt; this year. If you&amp;rsquo;re in that area you won&amp;rsquo;t want to miss him talking about Open Source, Red Hat and change. There are also some other great speakers lined up for these Red Hat Forums in Europe.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;To round out our week, Eric Schabell and Claus Ibsen talked about their talks from this week or a couple of weeks ago. Claus attended JDKIO 2016 in Copenhagen where he discussed Apache Camel and Java based microservices. Read about his trip, or watch the recordings &lt;a href="http://planet.jboss.org/post/videos_from_my_two_latest_talks_about_apache_camel_and_developing_java_based_microservices" rel="nofollow" target="_blank"&gt;in his blog post&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;In London this week, Eric Schabell talked about private cloud at the London JBug. &lt;a href="http://planet.jboss.org/post/london_jbug_recap_a_night_of_appdev_and_private_cloud" rel="nofollow" target="_blank"&gt;His slides&lt;/a&gt; are available for those interested.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;Thanks everyone for making this another wonderful week in tech! Stay tuned for more software, talks, and information as time goes on.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;Last updated 2016-09-24 00:56:35 MDT&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- [DocumentBodyEnd:ea5b1710-844d-4631-ad87-eded6b8859bb] --&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/JJ5tMncYpuE" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-09-24T07:02:19+00:00</updated>
+	<author><name>Jason Porter</name></author>
+	<source>
+		<link rel="self" href="http://community.jboss.org/blogs/weekly-editorial/feeds/" />
+		<title>Weekly Editorial</title></source>
+
+	<category term="byteman" />
+
+	<category term="hibernate-orm" />
+
+	<category term="keycloak" />
+
+	<category term="hawkular" />
+
+	<category term="microservices" />
+
+	<category term="microprofile" />
+
+
+<feedburner:origLink>https://developer.jboss.org/blogs/weekly-editorial/2016/09/24/this-week-in-jboss-september-24-2016</feedburner:origLink></entry>
+
+<entry>
+	<id>http://tools.jboss.org/blog/10.1.0.ga-for-neon.html</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/sBkDh6YtT38/10.1.0.ga-for-neon.html" rel="alternate" type="text/html" />
+	<title>JBoss Tools and Red Hat Developer Studio Maintenance Release for Eclipse Neon</title>
+	<summary type="html"><![CDATA[
+      <div><div id="preamble">
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p><a href="http://tools.jboss.org/downloads/jbosstools/neon/4.4.1.Final.html">JBoss Tools 4.4.1</a> and <a href="http://tools.jboss.org/downloads/devstudio/neon/10.1.0.GA.html">Red Hat JBoss Developer Studio 10.1</a> for Eclipse Neon are here waiting for you. Check it out!</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/blog/images/devstudio10.png" alt="devstudio10" />
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="installation"><a class="anchor" href="#installation"></a>Installation</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>JBoss Developer Studio comes with everything pre-bundled in its installer. Simply download it from our <a href="https://www.jboss.org/products/devstudio.html">JBoss Products page</a> and run it like this:</p>
+      </div>
+      <div class="literalblock">
+      <div class="content">
+      <pre>java -jar jboss-devstudio-&lt;installername&gt;.jar</pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>JBoss Tools or Bring-Your-Own-Eclipse (BYOE) JBoss Developer Studio require a bit more:</p>
+      </div>
+      <div class="paragraph">
+      <p>This release requires at least Eclipse 4.6 (Neon) but we recommend
+      using the latest <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neonr">Eclipse 4.6 Neon JEE Bundle</a> since then you get most of the dependencies preinstalled.</p>
+      </div>
+      <div class="paragraph">
+      <p>Once you have installed Eclipse, you can either find us on the Eclipse Marketplace under &quot;JBoss Tools&quot; or &quot;Red Hat JBoss Developer Studio&quot;.</p>
+      </div>
+      <div class="paragraph">
+      <p>For JBoss Tools, you can also use our update site directly.</p>
+      </div>
+      <div class="literalblock">
+      <div class="content">
+      <pre>http://download.jboss.org/jbosstools/neon/stable/updates/</pre>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="what-is-new"><a class="anchor" href="#what-is-new"></a>What is new?</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>Our main focus for this release was improvements for container based development and bug fixing.</p>
+      </div>
+      <div class="sect2">
+      <h3 id="improved-openshift-3-and-docker-tools"><a class="anchor" href="#improved-openshift-3-and-docker-tools"></a>Improved OpenShift 3 and Docker Tools</h3>
+      <div class="paragraph">
+      <p>We continue to work on providing better experience for container based development in JBoss Tools and Developer Studio. Let’s go through a few interesting updates here.</p>
+      </div>
+      <div class="sect3">
+      <h4 id="support-for-container-labels"><a class="anchor" href="#support-for-container-labels"></a>Support for Container Labels</h4>
+      <div class="paragraph">
+      <p>Users can now specify labels when running a container.
+      The labels are saved in the launch configuration and can also be edited before relaunching the container.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/docker/images/docker_neon1_sprint118/container_labels.png" alt="Container Labels" />
+      </div>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="automatically-detect-known-docker-daemon-connections"><a class="anchor" href="#automatically-detect-known-docker-daemon-connections"></a>Automatically detect known Docker daemon connections</h4>
+      <div class="paragraph">
+      <p>When the Docker Explorer view is opened, the list of existing connections (saved from a previous session) is reloaded.
+      In addition to this behaviour, the view will also attempt to find new connections using default settings such
+      the &apos;unix:///var/run/docker.sock&apos; Unix socket or the &apos;DOCKER_HOST&apos;, &apos;DOCKER_CERT_PATH&apos; and &apos;DOCKER_TLS_VERIFY&apos; environment
+      variables. This means that by default, in a new workspace, if a Docker daemon is reachable using one of those methods, the
+      user does not have to use the &quot;New Connection&quot; wizard to get a connection.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="extension-point-for-docker-daemon-connection-settings"><a class="anchor" href="#extension-point-for-docker-daemon-connection-settings"></a>Extension point for Docker daemon connection settings</h4>
+      <div class="paragraph">
+      <p>An extension point has been added to the Docker core plugin to allow for custom connection settings provisionning.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="support-for-docker-compose"><a class="anchor" href="#support-for-docker-compose"></a>Support for Docker Compose</h4>
+      <div class="paragraph">
+      <p>Support for Docker Compose has finally landed !</p>
+      </div>
+      <div class="paragraph">
+      <p>Users can select a <code>docker-compose.yml</code> file and start Docker Compose from the
+      context menu, using the <code>Run &gt; Docker Compose</code> launcher shortcut.</p>
+      </div>
+      <div class="paragraph">
+      <p>The Docker Compose process displays it logs (with support for text coloring based on ANSI escape codes)
+      and provides a <code>stop</code> button to stop the underlying process.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/docker/images/docker_neon1_sprint119/docker_compose.png" alt="Docker Compose" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>Also, as with the support for building and running containers, a launch configuration is created after the
+      first call to Docker Compose on the selected <code>docker-compose.yml</code> file.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="docker-image-hierarchy-view-improvements"><a class="anchor" href="#docker-image-hierarchy-view-improvements"></a>Docker Image Hierarchy View Improvements</h4>
+      <div class="paragraph">
+      <p>The new Docker Image Hierarchy view not only shows the relationships between
+      images (which is particularly interesting when an image is built using a Dockerfile),
+      but it also includes containers based on the images in the tree view
+      while providing with all relevant commands (in the context menu) for containers and images.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/docker/images/docker_neon1_sprint119/docker_image_hierarch_view.png" alt="Docker Image Hierarchy View" />
+      </div>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="server-templates-can-now-be-displayed-edited"><a class="anchor" href="#server-templates-can-now-be-displayed-edited"></a>Server templates can now be displayed / edited</h4>
+      <div class="paragraph">
+      <p>Server templates are now displayed in the property view under the <code>Templates</code> tab:</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/property-view-template.png" alt="property view template" width="600" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>You can access/edit the content of the template with the <code>Edit</code> command.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="events-can-now-be-displayed"><a class="anchor" href="#events-can-now-be-displayed"></a>Events can now be displayed</h4>
+      <div class="paragraph">
+      <p>Events generated as part of the application livecycle are now displayed in the property view under the <code>Events</code> tab (available at the project level):</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/property-view-event.png" alt="property view event" width="600" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>You can refresh the content of the event with the <code>Refresh</code> command or open the event in the OpenShift web console with the <code>Show In → Web Console</code> command.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="volume-claims-can-now-be-displayed"><a class="anchor" href="#volume-claims-can-now-be-displayed"></a>Volume claims can now be displayed</h4>
+      <div class="paragraph">
+      <p>Volume claims are now displayed in the property view under the <code>Storage</code> tab (available at the project level):</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/property-view-storage1.png" alt="property view storage1" width="600" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>You can create a new volume claim using a resource file like the following:</p>
+      </div>
+      <div class="listingblock">
+      <div class="content">
+      <pre class="prettyprint highlight"><code class="language-json" data-lang="json">{
+          &quot;apiVersion&quot;: &quot;v1&quot;,
+          &quot;kind&quot;: &quot;PersistentVolumeClaim&quot;,
+          &quot;metadata&quot;: {
+              &quot;name&quot;: &quot;claim1&quot;
+          },
+          &quot;spec&quot;: {
+              &quot;accessModes&quot;: [ &quot;ReadWriteOnce&quot; ],
+              &quot;resources&quot;: {
+                  &quot;requests&quot;: {
+                      &quot;storage&quot;: &quot;1Gi&quot;
+                  }
+              }
+          }
+      }</code></pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>If you deploy such a resource file with the <code>New → Resource</code> command at the project level, the <code>Storage</code> tab will be updated:</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/property-view-storage2.png" alt="property view storage2" width="600" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>You can access/edit the content of the volume claim with the <code>Edit</code> command or open the volume claim in the OpenShift web console with the <code>Show In → Web Console</code> command.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="server-tools"><a class="anchor" href="#server-tools"></a>Server Tools</h3>
+      <div class="sect3">
+      <h4 id="quickfixes-now-available-in-runtime-detection"><a class="anchor" href="#quickfixes-now-available-in-runtime-detection"></a>QuickFixes now available in runtime detection</h4>
+      <div class="paragraph">
+      <p>Runtime detection has been a feature of JBossTools for a long while, however, it would sometimes create runtime and server adapters with configuration errors without alerting the user. Now, the user will have an opportunity to execute quickfixes before completing the creation of their runtimes and servers.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-15189_rt_detect_1.png" alt="JBIDE 15189 rt detect 1" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>To see this in action, we can first open up the runtime-detection preference page. We can see that our runtime-detection will automatically search three paths for valid runtimes of any type.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-15189_rt_detect_2.png" alt="JBIDE 15189 rt detect 2" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>Once we click search, the runtime-detection’s search dialog appears, with results it has found. In this case, it has located an EAP 6.4 and an EAP 7.0 installation. However, we can see that both have errors. If we click on the error column for the discovered EAP 7.0, the error is expanded, and we see that we’re missing a valid / compatible JRE. To fix the issue, we should click on this item.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-15189_rt_detect_3.png" alt="JBIDE 15189 rt detect 3" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>When we click on the problem for EAP 7, the new JRE dialog appears, allowing us to add a compatible JRE. The dialog helpfully informs us of what the restrictions are for this specific runtime. In this case, we’re asked to define a JRE with a minimum version of Java-8.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-15189_rt_detect_4.png" alt="JBIDE 15189 rt detect 4" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>If we continue along with the process by locating and adding a Java 8 JRE, as shown above, and finish the dialog, we’ll see that all the errors will disappear for both runtimes. In this example, the EAP 6.4 required a JRE of Java 7 or higher. The addition of the Java 8 JRE fixed this issue as well.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-15189_rt_detect_5.png" alt="JBIDE 15189 rt detect 5" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>Hopefully, this will help users preemptively discover and fix errors before being hit with surprising errors when trying to use the created server adapters.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="support-for-wildfly-10-1"><a class="anchor" href="#support-for-wildfly-10-1"></a>Support for WildFly 10.1</h4>
+      <div class="paragraph">
+      <p>The WildFly 10.0 Server adapter has been renamed to WildFly 10.x. It has been tested and verified to work for WildFly 10.1 installations.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="hibernate-tools"><a class="anchor" href="#hibernate-tools"></a>Hibernate Tools</h3>
+      <div class="sect3">
+      <h4 id="hibernate-runtime-provider-updates"><a class="anchor" href="#hibernate-runtime-provider-updates"></a>Hibernate Runtime Provider Updates</h4>
+      <div class="paragraph">
+      <p>A number of additions and updates have been performed on the available Hibernate runtime  providers.</p>
+      </div>
+      <div class="sect4">
+      <h5 id="new-hibernate-5-2-runtime-provider"><a class="anchor" href="#new-hibernate-5-2-runtime-provider"></a>New Hibernate 5.2 Runtime Provider</h5>
+      <div class="paragraph">
+      <p>With final releases available in the Hibernate 5.2 stream, the time was right to make available a corresponding Hibernate 5.2 runtime provider. This runtime provider incorporates Hibernate Core version 5.2.2.Final and Hibernate Tools version 5.2.0.Beta1.</p>
+      </div>
+      <div class="imageblock" style="text-align: center">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/hibernate/images/4.4.1.Final/hibernate_5_2.png" alt="hibernate 5 2" width="381" />
+      </div>
+      <div class="title">Figure 1. Hibernate 5.2 is available</div>
+      </div>
+      </div>
+      <div class="sect4">
+      <h5 id="other-runtime-provider-updates"><a class="anchor" href="#other-runtime-provider-updates"></a>Other Runtime Provider Updates</h5>
+      <div class="paragraph">
+      <p>The Hibernate 4.3 runtime provider now incorporates Hibernate Core version 4.3.11.Final and Hibernate Tools version 4.3.5.Final.</p>
+      </div>
+      <div class="paragraph">
+      <p>The Hibernate 5.0 runtime provider now incorporates Hibernate Core version 5.0.10.Final and Hibernate Tools version 5.0.2.Final.</p>
+      </div>
+      <div class="paragraph">
+      <p>The Hibernate 5.1 runtime provider now incorporates Hibernate Core version 5.1.1.Final and Hibernate Tools version 5.1.0.CR1.</p>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="forge-tools"><a class="anchor" href="#forge-tools"></a>Forge Tools</h3>
+      <div class="sect3">
+      <h4 id="added-install-addon-from-the-catalog-command"><a class="anchor" href="#added-install-addon-from-the-catalog-command"></a>Added Install addon from the catalog command</h4>
+      <div class="paragraph">
+      <p>From Forge 3.3.0.Final onwards it is now possible to query and install addons listed in the <a href="http://forge.jboss.org/addons">Forge addons page</a>.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/forge/images/4.4.1.AM3/addon-install-from-catalog.png" alt="addon install from catalog" />
+      </div>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="forge-runtime-updated-to-3-3-1-final"><a class="anchor" href="#forge-runtime-updated-to-3-3-1-final"></a>Forge Runtime updated to 3.3.1.Final</h4>
+      <div class="paragraph">
+      <p>The included Forge runtime is now 3.3.1.Final. Read the official announcement <a href="http://forge.jboss.org/news/jboss-forge-3.3.1.final-is-here">here</a>.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/forge/images/4.4.1.Final/startup.png" alt="startup" />
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="freemarker"><a class="anchor" href="#freemarker"></a>Freemarker</h3>
+      <div class="sect3">
+      <h4 id="freemarker-2-3-25"><a class="anchor" href="#freemarker-2-3-25"></a>Freemarker 2.3.25</h4>
+      <div class="paragraph">
+      <p>Freemarker library included in the Freemarker IDE was updated to latest available version 2.3.25.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="flth-fltx-file-extensions-added"><a class="anchor" href="#flth-fltx-file-extensions-added"></a>flth / fltx file extensions added</h4>
+      <div class="paragraph">
+      <p>The new flth and fltx extensions have been added and associated with Freemarker IDE. <code>flth</code> stands for HTML content whereas <code>fltx</code> stands for XML content.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="overhaul-of-the-plugin-template-parser"><a class="anchor" href="#overhaul-of-the-plugin-template-parser"></a>Overhaul of the plugin template parser</h4>
+      <div class="paragraph">
+      <p>The parser that FreeMarker IDE uses to extract IDE-centric information
+      (needed for syntax highlighting, related tag highlighting,
+      auto-completion, outline view, etc.) was overhauled. Several bugs were
+      fixed, and support for the newer template language features were
+      added. Also, the syntax highlighting is now more detailed inside
+      expressions.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="related-tag-background-highlighting-fixed"><a class="anchor" href="#related-tag-background-highlighting-fixed"></a>Related tag background highlighting fixed</h4>
+      <div class="paragraph">
+      <p>Fixed the issue when the (by default) yellow highlighting of the
+      related FTL tags shift away from under the tag as you type.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="showing-whitespace-block-selection-mode"><a class="anchor" href="#showing-whitespace-block-selection-mode"></a>Showing whitespace, block selection mode</h4>
+      <div class="paragraph">
+      <p>The standard &quot;Show whitespace characters&quot; and &quot;Toggle block selection
+      mode&quot; icons are now available when editing a template.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="improved-automatic-finishing-of-freemarker-constructs"><a class="anchor" href="#improved-automatic-finishing-of-freemarker-constructs"></a>Improved automatic finishing of FreeMarker constructs</h4>
+      <div class="paragraph">
+      <p>When you type <code>&lt;#</code>, <code>&lt;@</code>, <code>${</code>, <code>#{</code> and <code>&lt;#--</code> the freemarker editor now automatically closes them.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="error-positions-links-on-the-console"><a class="anchor" href="#error-positions-links-on-the-console"></a>Error positions links on the console</h4>
+      <div class="paragraph">
+      <p>When a FreeMarker exception is printed to the console, the error
+      position in it is a link that navigates to the error. This has worked
+      long ago, but was broken for quite a while.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="fixed-auto-indentation"><a class="anchor" href="#fixed-auto-indentation"></a>Fixed auto-indentation</h4>
+      <div class="paragraph">
+      <p>When hitting enter, sometimes the new line haven’t inherited the
+      indentation of the last line.</p>
+      </div>
+      </div>
+      <div class="sect3">
+      <h4 id="updated-the-database-used-for-auto-completion"><a class="anchor" href="#updated-the-database-used-for-auto-completion"></a>Updated the &quot;database&quot; used for auto completion</h4>
+      <div class="paragraph">
+      <p>Auto completion now knows all directives and &quot;built-ins&quot; up to
+      FreeMarker 2.3.25.</p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="what-is-next"><a class="anchor" href="#what-is-next"></a>What is next?</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>Having JBoss Tools 4.4.1 and Developer Studio 10.1 out we are already working on the next maintenance release for Eclipse Neon.1.</p>
+      </div>
+      <div class="paragraph">
+      <p>Enjoy!</p>
+      </div>
+      <div class="paragraph">
+      <p>Jeff Maury</p>
+      </div>
+      </div>
+      </div></div>
+    ]]></summary>
+	<content type="html">&lt;html&gt;&lt;body&gt;&lt;div&gt;&lt;div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;&lt;a href="http://tools.jboss.org/downloads/jbosstools/neon/4.4.1.Final.html" target="_blank"&gt;JBoss Tools 4.4.1&lt;/a&gt; and &lt;a href="http://tools.jboss.org/downloads/devstudio/neon/10.1.0.GA.html" target="_blank"&gt;Red Hat JBoss Developer Studio 10.1&lt;/a&gt; for Eclipse Neon are here waiting for you. Check it out!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/blog/images/devstudio10.png" alt="devstudio10"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#installation" target="_blank"&gt;&lt;/a&gt;Installation&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;JBoss Developer Studio comes with everything pre-bundled in its installer. Simply download it from our &lt;a href="https://www.jboss.org/products/devstudio.html" target="_blank"&gt;JBoss Products page&lt;/a&gt; and run it like this:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;pre&gt;java -jar jboss-devstudio-&amp;lt;installername&amp;gt;.jar&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;JBoss Tools or Bring-Your-Own-Eclipse (BYOE) JBoss Developer Studio require a bit more:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;This release requires at least Eclipse 4.6 (Neon) but we recommend
+      using the latest &lt;a href="http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neonr" target="_blank"&gt;Eclipse 4.6 Neon JEE Bundle&lt;/a&gt; since then you get most of the dependencies preinstalled.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Once you have installed Eclipse, you can either find us on the Eclipse Marketplace under "JBoss Tools" or "Red Hat JBoss Developer Studio".&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;For JBoss Tools, you can also use our update site directly.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;pre&gt;http://download.jboss.org/jbosstools/neon/stable/updates/&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#what-is-new" target="_blank"&gt;&lt;/a&gt;What is new?&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Our main focus for this release was improvements for container based development and bug fixing.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h3&gt;&lt;a href="#improved-openshift-3-and-docker-tools" target="_blank"&gt;&lt;/a&gt;Improved OpenShift 3 and Docker Tools&lt;/h3&gt;
+      &lt;div&gt;
+      &lt;p&gt;We continue to work on providing better experience for container based development in JBoss Tools and Developer Studio. Let&amp;rsquo;s go through a few interesting updates here.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#support-for-container-labels" target="_blank"&gt;&lt;/a&gt;Support for Container Labels&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;Users can now specify labels when running a container.
+      The labels are saved in the launch configuration and can also be edited before relaunching the container.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/docker/images/docker_neon1_sprint118/container_labels.png" alt="Container Labels"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#automatically-detect-known-docker-daemon-connections" target="_blank"&gt;&lt;/a&gt;Automatically detect known Docker daemon connections&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;When the Docker Explorer view is opened, the list of existing connections (saved from a previous session) is reloaded.
+      In addition to this behaviour, the view will also attempt to find new connections using default settings such
+      the 'unix:///var/run/docker.sock' Unix socket or the 'DOCKER_HOST', 'DOCKER_CERT_PATH' and 'DOCKER_TLS_VERIFY' environment
+      variables. This means that by default, in a new workspace, if a Docker daemon is reachable using one of those methods, the
+      user does not have to use the "New Connection" wizard to get a connection.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#extension-point-for-docker-daemon-connection-settings" target="_blank"&gt;&lt;/a&gt;Extension point for Docker daemon connection settings&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;An extension point has been added to the Docker core plugin to allow for custom connection settings provisionning.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#support-for-docker-compose" target="_blank"&gt;&lt;/a&gt;Support for Docker Compose&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;Support for Docker Compose has finally landed !&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Users can select a &lt;code&gt;docker-compose.yml&lt;/code&gt; file and start Docker Compose from the
+      context menu, using the &lt;code&gt;Run &amp;gt; Docker Compose&lt;/code&gt; launcher shortcut.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;The Docker Compose process displays it logs (with support for text coloring based on ANSI escape codes)
+      and provides a &lt;code&gt;stop&lt;/code&gt; button to stop the underlying process.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/docker/images/docker_neon1_sprint119/docker_compose.png" alt="Docker Compose"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Also, as with the support for building and running containers, a launch configuration is created after the
+      first call to Docker Compose on the selected &lt;code&gt;docker-compose.yml&lt;/code&gt; file.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#docker-image-hierarchy-view-improvements" target="_blank"&gt;&lt;/a&gt;Docker Image Hierarchy View Improvements&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;The new Docker Image Hierarchy view not only shows the relationships between
+      images (which is particularly interesting when an image is built using a Dockerfile),
+      but it also includes containers based on the images in the tree view
+      while providing with all relevant commands (in the context menu) for containers and images.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/docker/images/docker_neon1_sprint119/docker_image_hierarch_view.png" alt="Docker Image Hierarchy View"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#server-templates-can-now-be-displayed-edited" target="_blank"&gt;&lt;/a&gt;Server templates can now be displayed / edited&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;Server templates are now displayed in the property view under the &lt;code&gt;Templates&lt;/code&gt; tab:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/property-view-template.png" alt="property view template" width="600"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;You can access/edit the content of the template with the &lt;code&gt;Edit&lt;/code&gt; command.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#events-can-now-be-displayed" target="_blank"&gt;&lt;/a&gt;Events can now be displayed&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;Events generated as part of the application livecycle are now displayed in the property view under the &lt;code&gt;Events&lt;/code&gt; tab (available at the project level):&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/property-view-event.png" alt="property view event" width="600"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;You can refresh the content of the event with the &lt;code&gt;Refresh&lt;/code&gt; command or open the event in the OpenShift web console with the &lt;code&gt;Show In &amp;rarr; Web Console&lt;/code&gt; command.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#volume-claims-can-now-be-displayed" target="_blank"&gt;&lt;/a&gt;Volume claims can now be displayed&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;Volume claims are now displayed in the property view under the &lt;code&gt;Storage&lt;/code&gt; tab (available at the project level):&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/property-view-storage1.png" alt="property view storage1" width="600"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;You can create a new volume claim using a resource file like the following:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;pre&gt;&lt;code data-lang="json"&gt;{
+          "apiVersion": "v1",
+          "kind": "PersistentVolumeClaim",
+          "metadata": {
+              "name": "claim1"
+          },
+          "spec": {
+              "accessModes": [ "ReadWriteOnce" ],
+              "resources": {
+                  "requests": {
+                      "storage": "1Gi"
+                  }
+              }
+          }
+      }&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;If you deploy such a resource file with the &lt;code&gt;New &amp;rarr; Resource&lt;/code&gt; command at the project level, the &lt;code&gt;Storage&lt;/code&gt; tab will be updated:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/property-view-storage2.png" alt="property view storage2" width="600"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;You can access/edit the content of the volume claim with the &lt;code&gt;Edit&lt;/code&gt; command or open the volume claim in the OpenShift web console with the &lt;code&gt;Show In &amp;rarr; Web Console&lt;/code&gt; command.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h3&gt;&lt;a href="#server-tools" target="_blank"&gt;&lt;/a&gt;Server Tools&lt;/h3&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#quickfixes-now-available-in-runtime-detection" target="_blank"&gt;&lt;/a&gt;QuickFixes now available in runtime detection&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;Runtime detection has been a feature of JBossTools for a long while, however, it would sometimes create runtime and server adapters with configuration errors without alerting the user. Now, the user will have an opportunity to execute quickfixes before completing the creation of their runtimes and servers.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-15189_rt_detect_1.png" alt="JBIDE 15189 rt detect 1"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;To see this in action, we can first open up the runtime-detection preference page. We can see that our runtime-detection will automatically search three paths for valid runtimes of any type.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-15189_rt_detect_2.png" alt="JBIDE 15189 rt detect 2"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Once we click search, the runtime-detection&amp;rsquo;s search dialog appears, with results it has found. In this case, it has located an EAP 6.4 and an EAP 7.0 installation. However, we can see that both have errors. If we click on the error column for the discovered EAP 7.0, the error is expanded, and we see that we&amp;rsquo;re missing a valid / compatible JRE. To fix the issue, we should click on this item.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-15189_rt_detect_3.png" alt="JBIDE 15189 rt detect 3"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;When we click on the problem for EAP 7, the new JRE dialog appears, allowing us to add a compatible JRE. The dialog helpfully informs us of what the restrictions are for this specific runtime. In this case, we&amp;rsquo;re asked to define a JRE with a minimum version of Java-8.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-15189_rt_detect_4.png" alt="JBIDE 15189 rt detect 4"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;If we continue along with the process by locating and adding a Java 8 JRE, as shown above, and finish the dialog, we&amp;rsquo;ll see that all the errors will disappear for both runtimes. In this example, the EAP 6.4 required a JRE of Java 7 or higher. The addition of the Java 8 JRE fixed this issue as well.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-15189_rt_detect_5.png" alt="JBIDE 15189 rt detect 5"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Hopefully, this will help users preemptively discover and fix errors before being hit with surprising errors when trying to use the created server adapters.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#support-for-wildfly-10-1" target="_blank"&gt;&lt;/a&gt;Support for WildFly 10.1&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;The WildFly 10.0 Server adapter has been renamed to WildFly 10.x. It has been tested and verified to work for WildFly 10.1 installations.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h3&gt;&lt;a href="#hibernate-tools" target="_blank"&gt;&lt;/a&gt;Hibernate Tools&lt;/h3&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#hibernate-runtime-provider-updates" target="_blank"&gt;&lt;/a&gt;Hibernate Runtime Provider Updates&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;A number of additions and updates have been performed on the available Hibernate runtime  providers.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h5&gt;&lt;a href="#new-hibernate-5-2-runtime-provider" target="_blank"&gt;&lt;/a&gt;New Hibernate 5.2 Runtime Provider&lt;/h5&gt;
+      &lt;div&gt;
+      &lt;p&gt;With final releases available in the Hibernate 5.2 stream, the time was right to make available a corresponding Hibernate 5.2 runtime provider. This runtime provider incorporates Hibernate Core version 5.2.2.Final and Hibernate Tools version 5.2.0.Beta1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/hibernate/images/4.4.1.Final/hibernate_5_2.png" alt="hibernate 5 2" width="381"&gt;&lt;/div&gt;
+      &lt;div&gt;Figure 1. Hibernate 5.2 is available&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h5&gt;&lt;a href="#other-runtime-provider-updates" target="_blank"&gt;&lt;/a&gt;Other Runtime Provider Updates&lt;/h5&gt;
+      &lt;div&gt;
+      &lt;p&gt;The Hibernate 4.3 runtime provider now incorporates Hibernate Core version 4.3.11.Final and Hibernate Tools version 4.3.5.Final.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;The Hibernate 5.0 runtime provider now incorporates Hibernate Core version 5.0.10.Final and Hibernate Tools version 5.0.2.Final.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;The Hibernate 5.1 runtime provider now incorporates Hibernate Core version 5.1.1.Final and Hibernate Tools version 5.1.0.CR1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h3&gt;&lt;a href="#forge-tools" target="_blank"&gt;&lt;/a&gt;Forge Tools&lt;/h3&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#added-install-addon-from-the-catalog-command" target="_blank"&gt;&lt;/a&gt;Added Install addon from the catalog command&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;From Forge 3.3.0.Final onwards it is now possible to query and install addons listed in the &lt;a href="http://forge.jboss.org/addons" target="_blank"&gt;Forge addons page&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/forge/images/4.4.1.AM3/addon-install-from-catalog.png" alt="addon install from catalog"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#forge-runtime-updated-to-3-3-1-final" target="_blank"&gt;&lt;/a&gt;Forge Runtime updated to 3.3.1.Final&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;The included Forge runtime is now 3.3.1.Final. Read the official announcement &lt;a href="http://forge.jboss.org/news/jboss-forge-3.3.1.final-is-here" target="_blank"&gt;here&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/forge/images/4.4.1.Final/startup.png" alt="startup"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h3&gt;&lt;a href="#freemarker" target="_blank"&gt;&lt;/a&gt;Freemarker&lt;/h3&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#freemarker-2-3-25" target="_blank"&gt;&lt;/a&gt;Freemarker 2.3.25&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;Freemarker library included in the Freemarker IDE was updated to latest available version 2.3.25.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#flth-fltx-file-extensions-added" target="_blank"&gt;&lt;/a&gt;flth / fltx file extensions added&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;The new flth and fltx extensions have been added and associated with Freemarker IDE. &lt;code&gt;flth&lt;/code&gt; stands for HTML content whereas &lt;code&gt;fltx&lt;/code&gt; stands for XML content.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#overhaul-of-the-plugin-template-parser" target="_blank"&gt;&lt;/a&gt;Overhaul of the plugin template parser&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;The parser that FreeMarker IDE uses to extract IDE-centric information
+      (needed for syntax highlighting, related tag highlighting,
+      auto-completion, outline view, etc.) was overhauled. Several bugs were
+      fixed, and support for the newer template language features were
+      added. Also, the syntax highlighting is now more detailed inside
+      expressions.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#related-tag-background-highlighting-fixed" target="_blank"&gt;&lt;/a&gt;Related tag background highlighting fixed&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;Fixed the issue when the (by default) yellow highlighting of the
+      related FTL tags shift away from under the tag as you type.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#showing-whitespace-block-selection-mode" target="_blank"&gt;&lt;/a&gt;Showing whitespace, block selection mode&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;The standard "Show whitespace characters" and "Toggle block selection
+      mode" icons are now available when editing a template.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#improved-automatic-finishing-of-freemarker-constructs" target="_blank"&gt;&lt;/a&gt;Improved automatic finishing of FreeMarker constructs&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;When you type &lt;code&gt;&amp;lt;#&lt;/code&gt;, &lt;code&gt;&amp;lt;@&lt;/code&gt;, &lt;code&gt;${&lt;/code&gt;, &lt;code&gt;#{&lt;/code&gt; and &lt;code&gt;&amp;lt;#--&lt;/code&gt; the freemarker editor now automatically closes them.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#error-positions-links-on-the-console" target="_blank"&gt;&lt;/a&gt;Error positions links on the console&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;When a FreeMarker exception is printed to the console, the error
+      position in it is a link that navigates to the error. This has worked
+      long ago, but was broken for quite a while.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#fixed-auto-indentation" target="_blank"&gt;&lt;/a&gt;Fixed auto-indentation&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;When hitting enter, sometimes the new line haven&amp;rsquo;t inherited the
+      indentation of the last line.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h4&gt;&lt;a href="#updated-the-database-used-for-auto-completion" target="_blank"&gt;&lt;/a&gt;Updated the "database" used for auto completion&lt;/h4&gt;
+      &lt;div&gt;
+      &lt;p&gt;Auto completion now knows all directives and "built-ins" up to
+      FreeMarker 2.3.25.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#what-is-next" target="_blank"&gt;&lt;/a&gt;What is next?&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Having JBoss Tools 4.4.1 and Developer Studio 10.1 out we are already working on the next maintenance release for Eclipse Neon.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Enjoy!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Jeff Maury&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/sBkDh6YtT38" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-09-21T16:04:52+00:00</updated>
+	<author><name>jeffmaury</name></author>
+	<source>
+		<link rel="self" href="http://tools.jboss.org/blog/" />
+		<title>JBoss Tools</title></source>
+
+	<category term="release" />
+
+	<category term="jbosstools" />
+
+	<category term="devstudio" />
+
+	<category term="jbosscentral" />
+
+
+<feedburner:origLink>http://tools.jboss.org/blog/10.1.0.ga-for-neon.html</feedburner:origLink></entry>
+
+<entry>
 	<id>https://developer.jboss.org/blogs/weekly-editorial/2016/09/17/this-week-in-jboss-16th-september-2016-microservices-journey</id>
 	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/jrDQYaV-GnM/this-week-in-jboss-16th-september-2016-microservices-journey" rel="alternate" type="text/html" />
 	<title>This week in JBoss (16th September 2016): Microservices Journey</title>
@@ -1067,206 +1881,6 @@
 
 
 <feedburner:origLink>https://developer.jboss.org/blogs/weekly-editorial/2016/07/29/this-week-in-jboss-29th-july-2016-summer-fun-has-begun</feedburner:origLink></entry>
-
-<entry>
-	<id>http://tools.jboss.org/blog/am2-for-neon.html</id>
-	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/Grgzu1LIss0/am2-for-neon.html" rel="alternate" type="text/html" />
-	<title>JBoss Tools AM2 for Eclipse Neon</title>
-	<summary type="html"><![CDATA[
-      <div><div id="preamble">
-      <div class="sectionbody">
-      <div class="paragraph">
-      <p>Happy to announce AM2 (Developer Milestone 2) build for Eclipse Neon.</p>
-      </div>
-      <div class="paragraph">
-      <p>Downloads available at <a href="http://tools.jboss.org/downloads/jbosstools/neon/4.4.1.AM2.html">JBoss Tools 4.4.1 AM2</a>.</p>
-      </div>
-      </div>
-      </div>
-      <div class="sect1">
-      <h2 id="what-is-new"><a class="anchor" href="#what-is-new"></a>What is New?</h2>
-      <div class="sectionbody">
-      <div class="paragraph">
-      <p>Full info is at <a href="http://tools.jboss.org/documentation/whatsnew/jbosstools/4.4.1.AM2.html">this page</a>. Some highlights are below.</p>
-      </div>
-      <div class="sect2">
-      <h3 id="openshift-3"><a class="anchor" href="#openshift-3"></a>OpenShift 3</h3>
-      <div class="paragraph">
-      <p>Although our main focus is bug fixes, we continue to work on providing better experience for container based development in JBoss Tools and Developer Studio. Let’s go through a few interesting updates here and you can find more details on <a href="http://tools.jboss.org/documentation/whatsnew/jbosstools/4.4.1.AM2.html">the What’s New page</a>.</p>
-      </div>
-      <div class="sect3">
-      <h4 id="server-templates"><a class="anchor" href="#server-templates"></a>Server templates</h4>
-      <div class="paragraph">
-      <p>Server templates are now displayed in the property view under the Templates tab:</p>
-      </div>
-      <div class="imageblock">
-      <div class="content">
-      <img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/property-view-template.png" alt="Property view" />
-      </div>
-      </div>
-      </div>
-      </div>
-      <div class="sect2">
-      <h3 id="forge"><a class="anchor" href="#forge"></a>Forge</h3>
-      <div class="sect3">
-      <h4 id="forge-runtime-updated-to-3-2-3-final"><a class="anchor" href="#forge-runtime-updated-to-3-2-3-final"></a>Forge Runtime updated to 3.2.3.Final</h4>
-      <div class="paragraph">
-      <p>The included Forge runtime is now 3.2.3.Final. Read the official announcement <a href="http://forge.jboss.org/news/jboss-forge-3.2.3.final-is-here">here</a>.</p>
-      </div>
-      <div class="imageblock">
-      <div class="content">
-      <img src="http://tools.jboss.org/documentation/whatsnew/forge/images/4.4.1.AM2/startup.png" alt="startup" />
-      </div>
-      </div>
-      </div>
-      </div>
-      <div class="sect2">
-      <h3 id="freemarker"><a class="anchor" href="#freemarker"></a>Freemarker</h3>
-      <div class="sect3">
-      <h4 id="freemarker-2-3-25"><a class="anchor" href="#freemarker-2-3-25"></a>Freemarker 2.3.25</h4>
-      <div class="paragraph">
-      <p>Freemarker library included in the Freemarker IDE was updated to latest available version 2.3.25.</p>
-      </div>
-      <p>Related JIRA: <a href="https://issues.jboss.org/browse/JBIDE-22700">JBIDE-22700</a></p>
-      </div>
-      <div class="sect3">
-      <h4 id="flth-fltx-file-extensions-added"><a class="anchor" href="#flth-fltx-file-extensions-added"></a>flth / fltx file extensions added</h4>
-      <div class="paragraph">
-      <p>The new flth and fltx extensions have been added and associated with Freemarker IDE. <code>flth</code> stands for HTML content whereas <code>fltx</code> stands for XML content.</p>
-      </div>
-      <p>Related JIRA: <a href="https://issues.jboss.org/browse/JBIDE-22636">JBIDE-22636</a></p>
-      <div class="paragraph">
-      <p>Enjoy!</p>
-      </div>
-      <div class="paragraph">
-      <p>Jeff Maury</p>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div></div>
-    ]]></summary>
-	<content type="html">&lt;html&gt;&lt;body&gt;&lt;div&gt;&lt;div&gt;
-      &lt;div&gt;
-      &lt;div&gt;
-      &lt;p&gt;Happy to announce AM2 (Developer Milestone 2) build for Eclipse Neon.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-      &lt;p&gt;Downloads available at &lt;a href="http://tools.jboss.org/downloads/jbosstools/neon/4.4.1.AM2.html" target="_blank"&gt;JBoss Tools 4.4.1 AM2&lt;/a&gt;.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-      &lt;h2&gt;&lt;a href="#what-is-new" target="_blank"&gt;&lt;/a&gt;What is New?&lt;/h2&gt;
-      &lt;div&gt;
-      &lt;div&gt;
-      &lt;p&gt;Full info is at &lt;a href="http://tools.jboss.org/documentation/whatsnew/jbosstools/4.4.1.AM2.html" target="_blank"&gt;this page&lt;/a&gt;. Some highlights are below.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-      &lt;h3&gt;&lt;a href="#openshift-3" target="_blank"&gt;&lt;/a&gt;OpenShift 3&lt;/h3&gt;
-      &lt;div&gt;
-      &lt;p&gt;Although our main focus is bug fixes, we continue to work on providing better experience for container based development in JBoss Tools and Developer Studio. Let&amp;rsquo;s go through a few interesting updates here and you can find more details on &lt;a href="http://tools.jboss.org/documentation/whatsnew/jbosstools/4.4.1.AM2.html" target="_blank"&gt;the What&amp;rsquo;s New page&lt;/a&gt;.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-      &lt;h4&gt;&lt;a href="#server-templates" target="_blank"&gt;&lt;/a&gt;Server templates&lt;/h4&gt;
-      &lt;div&gt;
-      &lt;p&gt;Server templates are now displayed in the property view under the Templates tab:&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-      &lt;div&gt;
-      &lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/property-view-template.png" alt="Property view"&gt;&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-      &lt;h3&gt;&lt;a href="#forge" target="_blank"&gt;&lt;/a&gt;Forge&lt;/h3&gt;
-      &lt;div&gt;
-      &lt;h4&gt;&lt;a href="#forge-runtime-updated-to-3-2-3-final" target="_blank"&gt;&lt;/a&gt;Forge Runtime updated to 3.2.3.Final&lt;/h4&gt;
-      &lt;div&gt;
-      &lt;p&gt;The included Forge runtime is now 3.2.3.Final. Read the official announcement &lt;a href="http://forge.jboss.org/news/jboss-forge-3.2.3.final-is-here" target="_blank"&gt;here&lt;/a&gt;.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-      &lt;div&gt;
-      &lt;img src="http://tools.jboss.org/documentation/whatsnew/forge/images/4.4.1.AM2/startup.png" alt="startup"&gt;&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-      &lt;h3&gt;&lt;a href="#freemarker" target="_blank"&gt;&lt;/a&gt;Freemarker&lt;/h3&gt;
-      &lt;div&gt;
-      &lt;h4&gt;&lt;a href="#freemarker-2-3-25" target="_blank"&gt;&lt;/a&gt;Freemarker 2.3.25&lt;/h4&gt;
-      &lt;div&gt;
-      &lt;p&gt;Freemarker library included in the Freemarker IDE was updated to latest available version 2.3.25.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;p&gt;Related JIRA: &lt;a href="https://issues.jboss.org/browse/JBIDE-22700" target="_blank"&gt;JBIDE-22700&lt;/a&gt;&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-      &lt;h4&gt;&lt;a href="#flth-fltx-file-extensions-added" target="_blank"&gt;&lt;/a&gt;flth / fltx file extensions added&lt;/h4&gt;
-      &lt;div&gt;
-      &lt;p&gt;The new flth and fltx extensions have been added and associated with Freemarker IDE. &lt;code&gt;flth&lt;/code&gt; stands for HTML content whereas &lt;code&gt;fltx&lt;/code&gt; stands for XML content.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;p&gt;Related JIRA: &lt;a href="https://issues.jboss.org/browse/JBIDE-22636" target="_blank"&gt;JBIDE-22636&lt;/a&gt;&lt;/p&gt;
-      &lt;div&gt;
-      &lt;p&gt;Enjoy!&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-      &lt;p&gt;Jeff Maury&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/Grgzu1LIss0" height="1" width="1" alt=""/&gt;</content>
-	<updated>2016-07-29T17:22:08+00:00</updated>
-	<author><name>jeffmaury</name></author>
-	<source>
-		<link rel="self" href="http://tools.jboss.org/blog/" />
-		<title>JBoss Tools</title></source>
-
-	<category term="release" />
-
-	<category term="jbosstools" />
-
-	<category term="jbosscentral" />
-
-
-<feedburner:origLink>http://tools.jboss.org/blog/am2-for-neon.html</feedburner:origLink></entry>
-
-<entry>
-	<id>https://developer.jboss.org/blogs/weekly-editorial/2016/07/25/this-week-in-jboss-25th-july-2016-summer-breeze</id>
-	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/wNu8Nyu_OYQ/this-week-in-jboss-25th-july-2016-summer-breeze" rel="alternate" type="text/html" />
-	<title>This week in JBoss (25th July 2016): Summer Breeze</title>
-	<summary type="html"><![CDATA[<!-- [DocumentBodyStart:8d4d7b06-3a09-4905-9b39-5cf3768c6332] --><div class="jive-rendered-content"><p><em>Summer is definitely here in the Northern Hemisphere, and if not hindering the activities of the community it certainly show by change of balance between announcement and releases over in depth technical article <span aria-label="Happy" class="emoticon_happy emoticon-inline" style="height:16px;width:16px;"></span> All the better for our readers, as I'm pretty sure you'll enjoy the numerous technical bites (or bytes) from last week !</em></p><h1></h1><h1>Technical bytes</h1><p style="min-height: 8pt; padding: 0px;">&#160;</p><p>So if you like techcrunch and in depth article, you are in for a treat this week. First, let's start with alternative language and take a look at the <a class="jive-link-external-small" href="http://ceylon-lang.org/blog/2016/07/18/typescript-status-report/" rel="nofollow">Ceylon TypeScript Loader (GSoC project)</a>. From there, you should move quite naturally to some more high level client technologies, and see <a class="jive-link-external-small" href="http://www.hawkular.org/blog/2016/07/19/android-client-progess.html" rel="nofollow">What is new in Android Client with Hawkular</a>. Of course, if you prefer to stay on the language level, there is also this very interesting article on <a class="jive-link-external-small" href="http://in.relation.to/2016/07/19/null-andnot-null-discriminator-values/" rel="nofollow">Null and not-null @DiscriminatorValue options</a>. See ? Only good stuff out there !</p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p>Now, let's move to a more high level overview. with this passionating article on <a class="jive-link-external-small" href="http://middlewareblog.redhat.com/2016/07/11/visualizing-integration-applications/" rel="nofollow">Visualizing Integration Applications</a>. It's clearly a broad (and thus complex) topic, but this article does a fair job at at both describing the state of art and how we got here, but also sum up what are the current solutions and best practices. Kudos to its author <a class="jive-link-external-small" href="https://twitter.com/bibryam?lang=en" rel="nofollow">Bilgin Ibryam</a>.<span style="font-size: 13.3333px;"> </span></p><p><span style="font-size: 10pt; line-height: 1.5em;"><br/></span></p><p><span style="font-size: 10pt; line-height: 1.5em;">Last, but not the least, </span><a class="jive-link-external-small" href="http://www.schabell.org/2016/07/redhat-coolstore-vaadin-powered-solution.html" rel="nofollow">Eric D. Schabell describes a Vaadin powered solution</a><span style="font-size: 10pt; line-height: 1.5em;">, using the Red Hat Cool Store demo, but also illustrating, at the same time, a cool usage of the </span><span style="font-size: 10pt; line-height: 1.5em;"> JBoss BRMS framework.</span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><h1>Keycloak going "legit" : Red Hat Web Single Sign-On !</h1><p style="min-height: 8pt; padding: 0px;">&#160;</p><p>Keycloak has been a thriving project since its inception, and if you follow the weekly carefully, you must have seen many news, article and frequent releases from the project. And this is why, I wanted to echo here a news coming from the Red Hat JBoss Middleware blog, that may have not reach the JBoss Community: <a class="jive-link-external-small" href="http://middlewareblog.redhat.com/2016/07/12/tech-preview-integrated-single-sign-on/" rel="nofollow">Red Hat announces Integrated Web Single Sign-On and Identity Federation.</a> Indeed, Red Hat has decided to have a product based on Keycloak, and anyone will soon be able to request support and/or expertise if needed. Congratulations to the project and the community, this is a big achievement ! </p><p style="min-height: 8pt; padding: 0px;">&#160;</p><h1>Infinispan &amp; Docker - a mix in Heaven</h1><p style="min-height: 8pt; padding: 0px;">&#160;</p><p>Infinispan is a very powerful and flexible project, and I'm for one certainly happy to that there is now <a class="jive-link-external-small" href="http://blog.infinispan.org/2016/07/improved-infinispan-docker-image.html" rel="nofollow">Improved Infinispan Docker image available </a><span style="font-size: 10pt; line-height: 1.5em;">, whiich hopefully will enable people to easily setup and play with the project. So, time to discover the </span><a class="jive-link-external-small" href="http://blog.infinispan.org/2016/07/bleeding-edge-on-docker.html" rel="nofollow">bleeding edge of Infinispan on Docker</a><span style="font-size: 10pt; line-height: 1.5em;"> !</span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><h1>Releases, releases, releases...</h1><p style="min-height: 8pt; padding: 0px;">&#160;</p><p>Well for once, and this must be a record, there is only one release in the last days ! But still a good one <span aria-label="Happy" class="emoticon_happy emoticon-inline" style="height:16px;width:16px;"></span>&#160; :</p><p style="min-height: 8pt; padding: 0px;">&#160;</p><ul><li><a class="jive-link-external-small" href="http://weld.cdi-spec.org/news/2016/07/21/arq-container-weld-releasel/" rel="nofollow">Weld: Arquillian container Weld 2.0.0.Beta1 released!</a></li></ul><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><em>That's all for this week, please join us again for the next installment of the JBoss Editorial where we will endeavor to bring you more interesting articles written by members of the JBoss communities. And stay up to date with latest developments by following <a class="jive-link-external-small" href="https://twitter.com/jbossdeveloper" rel="nofollow">@jbossdeveloper</a> on twitter.</em></p></div><!-- [DocumentBodyEnd:8d4d7b06-3a09-4905-9b39-5cf3768c6332] -->]]></summary>
-	<content type="html">&lt;html&gt;&lt;!-- [DocumentBodyStart:8d4d7b06-3a09-4905-9b39-5cf3768c6332] --&gt;&lt;body&gt;&lt;div&gt;&lt;p&gt;&lt;em&gt;Summer is definitely here in the Northern Hemisphere, and if not hindering the activities of the community it certainly show by change of balance between announcement and releases over in depth technical article &lt;span aria-label="Happy"&gt;&lt;/span&gt; All the better for our readers, as I'm pretty sure you'll enjoy the numerous technical bites (or bytes) from last week !&lt;/em&gt;&lt;/p&gt;&lt;h1&gt;&lt;/h1&gt;&lt;h1&gt;Technical bytes&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;So if you like techcrunch and in depth article, you are in for a treat this week. First, let's start with alternative language and take a look at the &lt;a href="http://ceylon-lang.org/blog/2016/07/18/typescript-status-report/" rel="nofollow" target="_blank"&gt;Ceylon TypeScript Loader (GSoC project)&lt;/a&gt;. From there, you should move quite naturally to some more high level client technologies, and see &lt;a href="http://www.hawkular.org/blog/2016/07/19/android-client-progess.html" rel="nofollow" target="_blank"&gt;What is new in Android Client with Hawkular&lt;/a&gt;. Of course, if you prefer to stay on the language level, there is also this very interesting article on &lt;a href="http://in.relation.to/2016/07/19/null-andnot-null-discriminator-values/" rel="nofollow" target="_blank"&gt;Null and not-null @DiscriminatorValue options&lt;/a&gt;. See ? Only good stuff out there !&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Now, let's move to a more high level overview. with this passionating article on &lt;a href="http://middlewareblog.redhat.com/2016/07/11/visualizing-integration-applications/" rel="nofollow" target="_blank"&gt;Visualizing Integration Applications&lt;/a&gt;. It's clearly a broad (and thus complex) topic, but this article does a fair job at at both describing the state of art and how we got here, but also sum up what are the current solutions and best practices. Kudos to its author &lt;a href="https://twitter.com/bibryam?lang=en" rel="nofollow" target="_blank"&gt;Bilgin Ibryam&lt;/a&gt;.&lt;span&gt; &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Last, but not the least, &lt;/span&gt;&lt;a href="http://www.schabell.org/2016/07/redhat-coolstore-vaadin-powered-solution.html" rel="nofollow" target="_blank"&gt;Eric D. Schabell describes a Vaadin powered solution&lt;/a&gt;&lt;span&gt;, using the Red Hat Cool Store demo, but also illustrating, at the same time, a cool usage of the &lt;/span&gt;&lt;span&gt; JBoss BRMS framework.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h1&gt;Keycloak going "legit" : Red Hat Web Single Sign-On !&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Keycloak has been a thriving project since its inception, and if you follow the weekly carefully, you must have seen many news, article and frequent releases from the project. And this is why, I wanted to echo here a news coming from the Red Hat JBoss Middleware blog, that may have not reach the JBoss Community: &lt;a href="http://middlewareblog.redhat.com/2016/07/12/tech-preview-integrated-single-sign-on/" rel="nofollow" target="_blank"&gt;Red Hat announces Integrated Web Single Sign-On and Identity Federation.&lt;/a&gt; Indeed, Red Hat has decided to have a product based on Keycloak, and anyone will soon be able to request support and/or expertise if needed. Congratulations to the project and the community, this is a big achievement ! &lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h1&gt;Infinispan &amp;amp; Docker - a mix in Heaven&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Infinispan is a very powerful and flexible project, and I'm for one certainly happy to that there is now &lt;a href="http://blog.infinispan.org/2016/07/improved-infinispan-docker-image.html" rel="nofollow" target="_blank"&gt;Improved Infinispan Docker image available &lt;/a&gt;&lt;span&gt;, whiich hopefully will enable people to easily setup and play with the project. So, time to discover the &lt;/span&gt;&lt;a href="http://blog.infinispan.org/2016/07/bleeding-edge-on-docker.html" rel="nofollow" target="_blank"&gt;bleeding edge of Infinispan on Docker&lt;/a&gt;&lt;span&gt; !&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h1&gt;Releases, releases, releases...&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Well for once, and this must be a record, there is only one release in the last days ! But still a good one &lt;span aria-label="Happy"&gt;&lt;/span&gt;&amp;nbsp; :&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="http://weld.cdi-spec.org/news/2016/07/21/arq-container-weld-releasel/" rel="nofollow" target="_blank"&gt;Weld: Arquillian container Weld 2.0.0.Beta1 released!&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;em&gt;That's all for this week, please join us again for the next installment of the JBoss Editorial where we will endeavor to bring you more interesting articles written by members of the JBoss communities. And stay up to date with latest developments by following &lt;a href="https://twitter.com/jbossdeveloper" rel="nofollow" target="_blank"&gt;@jbossdeveloper&lt;/a&gt; on twitter.&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;&lt;!-- [DocumentBodyEnd:8d4d7b06-3a09-4905-9b39-5cf3768c6332] --&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/wNu8Nyu_OYQ" height="1" width="1" alt=""/&gt;</content>
-	<updated>2016-07-25T14:02:46+00:00</updated>
-	<author><name>Romain Pelisse</name></author>
-	<source>
-		<link rel="self" href="http://community.jboss.org/blogs/weekly-editorial/feeds/" />
-		<title>Weekly Editorial</title></source>
-
-	<category term="brms" />
-
-	<category term="ceylon" />
-
-	<category term="docker" />
-
-	<category term="keycloak" />
-
-	<category term="infinispan;" />
-
-	<category term="hawkular" />
-
-	<category term="typescript" />
-
-	<category term="android development" />
-
-	<category term="weld 2.0" />
-
-	<category term="vaadim" />
-
-
-<feedburner:origLink>https://developer.jboss.org/blogs/weekly-editorial/2016/07/25/this-week-in-jboss-25th-july-2016-summer-breeze</feedburner:origLink></entry>
 
 
 </feed><!-- vim:ft=xml
