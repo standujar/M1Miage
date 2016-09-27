@@ -1,3 +1,0 @@
-INDEX VERSION 1.129+C:\Users\Stanislas\Documents\GitHub\M1Miage\J2EE\TD\.metadata\.plugins\org.eclipse.jdt.core
-2728209965.index
-1909429756.index
