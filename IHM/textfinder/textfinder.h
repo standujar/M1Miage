@@ -11,6 +11,7 @@
 #include <QTextCharFormat>
 #include <QUiLoader>
 #include <QFileDialog>
+#include <QResource>
 
 namespace Ui {
 class textfinder;
@@ -30,9 +31,10 @@ private:
     void parcourir();
 
 private slots:
-    void on_findButton_clicked();
-    void on_pushButton_clicked();
+    void on_Recherche_clicked();
+    void on_Parcourir_clicked();
+    void on_Quitter_clicked();
+    void on_Ok_1_clicked();
 };
-
 
 #endif // TEXTFINDER_H

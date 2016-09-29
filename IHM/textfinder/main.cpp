@@ -3,9 +3,9 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication qapp(argc, argv);
     textfinder w;
     w.show();
 
-    return a.exec();
+    return qapp.exec();
 }

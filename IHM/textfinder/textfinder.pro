@@ -13,9 +13,13 @@ TARGET = textfinder
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        textfinder.cpp
+SOURCES     += main.cpp\
+             textfinder.cpp
 
-HEADERS  += textfinder.h
+HEADERS     += textfinder.h
 
-FORMS    += textfinder.ui
+FORMS       += textfinder.ui
+
+CONFIG      += release
+
+RESOURCES   += ressource.qrc
