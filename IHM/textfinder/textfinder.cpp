@@ -11,18 +11,34 @@ textfinder::textfinder(QWidget *parent) :
 void textfinder::parcourir()
 {
     QFileDialog dialog(this);
-    dialog.setNameFilter(tr("Fichiers texte (*.txt);; Tous les fichiers (*.*)"));
-    dialog.setViewMode(QFileDialog::List);
-    dialog.setLabelText(QFileDialog::FileName, "Nom de fichier :");
+    dialog.setFileMode(QFileDialog::ExistingFile);
+    dialog.setNameFilter(tr("Fichiers Texte (*.txt);; Tous les fichiers (*.*)"));
+    dialog.setLabelText(QFileDialog::FileName, "Mon Fichier :");
     dialog.setLabelText(QFileDialog::FileType, "Type de fichiers :");
     dialog.setLabelText(QFileDialog::Accept, "Sélectionner");
     dialog.setLabelText(QFileDialog::Reject, "Annuler");
+    QStringList fileNames = dialog.selectedFiles();
 
-    QString fileNames = dialog.getOpenFileName();
-    ui->lineEdit_2->setText(fileNames);
-    textfinder::loadTextFile();
-    ui->findButton->setEnabled(true);
+    if(dialog.exec())
+        {
+            fileNames = dialog.selectedFiles();
+            ui->lineEdit_2->setText(fileNames.at(0));
+            fileNames.removeAt(0);
+        }
+    else
+    {
+        dialog.reject();
+    }
 
+    if(!ui->lineEdit_2->text().isEmpty())
+    {
+        textfinder::loadTextFile();
+        ui->findButton->setEnabled(true);
+    }
+    else
+    {
+        ui->findButton->setEnabled(false);
+    }
 }
 
 void textfinder::loadTextFile()
@@ -37,7 +53,7 @@ void textfinder::loadTextFile()
     inputFile.close();
 
     ui->textEdit->setPlainText(line);
-    QTextCursor cursor = ui->textEdit->textCursor();
+    ui->textEdit_3->setPlainText(line);
 }
 
 void textfinder::on_findButton_clicked()
@@ -63,7 +79,7 @@ void textfinder::on_findButton_clicked()
 
         QTextCharFormat plainFormat(highlightCursor.charFormat());
         QTextCharFormat colorFormat = plainFormat;
-        colorFormat.setForeground(Qt::blue);
+        colorFormat.setForeground(Qt::red);
 
         while (!highlightCursor.isNull() && !highlightCursor.atEnd()) {
             highlightCursor = document->find(searchString, highlightCursor, QTextDocument::FindWholeWords);

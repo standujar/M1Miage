@@ -4,7 +4,6 @@
 #include <QWidget>
 #include <QFile>
 #include <QTextStream>
-#include <QTextCursor>
 #include <QIODevice>
 #include <QString>
 #include <QTextDocument>

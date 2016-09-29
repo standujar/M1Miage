@@ -19,6 +19,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
@@ -27,9 +28,10 @@ QT_BEGIN_NAMESPACE
 class Ui_textfinder
 {
 public:
+    QTabWidget *tabWidget;
+    QWidget *tab;
     QWidget *gridLayoutWidget_3;
     QGridLayout *gridLayout_4;
-    QTextEdit *textEdit;
     QGridLayout *gridLayout;
     QLabel *label;
     QLineEdit *lineEdit;
@@ -44,29 +46,40 @@ public:
     QRadioButton *radioButton;
     QLabel *label_3;
     QRadioButton *radioButton_2;
+    QTextEdit *textEdit;
+    QWidget *tab_2;
+    QWidget *gridLayoutWidget_5;
+    QGridLayout *gridLayout_11;
+    QGridLayout *gridLayout_12;
+    QLabel *label_7;
+    QLineEdit *lineEdit_7;
+    QPushButton *findButton_3;
+    QGridLayout *gridLayout_13;
+    QLabel *label_8;
+    QLineEdit *lineEdit_8;
+    QGridLayout *gridLayout_14;
+    QLineEdit *lineEdit_9;
+    QLabel *label_10;
+    QTextEdit *textEdit_3;
 
     void setupUi(QWidget *textfinder)
     {
         if (textfinder->objectName().isEmpty())
             textfinder->setObjectName(QStringLiteral("textfinder"));
-        textfinder->resize(290, 301);
-        gridLayoutWidget_3 = new QWidget(textfinder);
+        textfinder->resize(294, 326);
+        tabWidget = new QTabWidget(textfinder);
+        tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        tabWidget->setGeometry(QRect(10, 10, 281, 311));
+        tab = new QWidget();
+        tab->setObjectName(QStringLiteral("tab"));
+        gridLayoutWidget_3 = new QWidget(tab);
         gridLayoutWidget_3->setObjectName(QStringLiteral("gridLayoutWidget_3"));
-        gridLayoutWidget_3->setGeometry(QRect(10, 10, 271, 281));
+        gridLayoutWidget_3->setGeometry(QRect(0, 0, 271, 281));
         gridLayout_4 = new QGridLayout(gridLayoutWidget_3);
         gridLayout_4->setSpacing(6);
         gridLayout_4->setContentsMargins(11, 11, 11, 11);
         gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
         gridLayout_4->setContentsMargins(0, 0, 0, 0);
-        textEdit = new QTextEdit(gridLayoutWidget_3);
-        textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setEnabled(true);
-        textEdit->setMouseTracking(false);
-        textEdit->setReadOnly(true);
-        textEdit->setAcceptRichText(true);
-
-        gridLayout_4->addWidget(textEdit, 3, 0, 1, 1);
-
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
@@ -144,8 +157,98 @@ public:
 
         gridLayout_4->addLayout(gridLayout_5, 2, 0, 1, 1);
 
+        textEdit = new QTextEdit(gridLayoutWidget_3);
+        textEdit->setObjectName(QStringLiteral("textEdit"));
+        textEdit->setEnabled(true);
+        textEdit->setMouseTracking(false);
+        textEdit->setReadOnly(true);
+        textEdit->setAcceptRichText(true);
+
+        gridLayout_4->addWidget(textEdit, 3, 0, 1, 1);
+
+        tabWidget->addTab(tab, QString());
+        gridLayoutWidget_3->raise();
+        gridLayoutWidget_3->raise();
+        tab_2 = new QWidget();
+        tab_2->setObjectName(QStringLiteral("tab_2"));
+        gridLayoutWidget_5 = new QWidget(tab_2);
+        gridLayoutWidget_5->setObjectName(QStringLiteral("gridLayoutWidget_5"));
+        gridLayoutWidget_5->setGeometry(QRect(0, 0, 271, 281));
+        gridLayout_11 = new QGridLayout(gridLayoutWidget_5);
+        gridLayout_11->setSpacing(6);
+        gridLayout_11->setContentsMargins(11, 11, 11, 11);
+        gridLayout_11->setObjectName(QStringLiteral("gridLayout_11"));
+        gridLayout_11->setContentsMargins(0, 0, 0, 0);
+        gridLayout_12 = new QGridLayout();
+        gridLayout_12->setSpacing(6);
+        gridLayout_12->setObjectName(QStringLiteral("gridLayout_12"));
+        label_7 = new QLabel(gridLayoutWidget_5);
+        label_7->setObjectName(QStringLiteral("label_7"));
+
+        gridLayout_12->addWidget(label_7, 0, 0, 1, 1);
+
+        lineEdit_7 = new QLineEdit(gridLayoutWidget_5);
+        lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
+
+        gridLayout_12->addWidget(lineEdit_7, 0, 1, 1, 1);
+
+        findButton_3 = new QPushButton(gridLayoutWidget_5);
+        findButton_3->setObjectName(QStringLiteral("findButton_3"));
+        findButton_3->setEnabled(false);
+
+        gridLayout_12->addWidget(findButton_3, 0, 2, 1, 1);
+
+
+        gridLayout_11->addLayout(gridLayout_12, 1, 0, 1, 1);
+
+        gridLayout_13 = new QGridLayout();
+        gridLayout_13->setSpacing(6);
+        gridLayout_13->setObjectName(QStringLiteral("gridLayout_13"));
+        label_8 = new QLabel(gridLayoutWidget_5);
+        label_8->setObjectName(QStringLiteral("label_8"));
+
+        gridLayout_13->addWidget(label_8, 0, 0, 1, 1);
+
+        lineEdit_8 = new QLineEdit(gridLayoutWidget_5);
+        lineEdit_8->setObjectName(QStringLiteral("lineEdit_8"));
+        lineEdit_8->setReadOnly(true);
+
+        gridLayout_13->addWidget(lineEdit_8, 0, 1, 1, 1);
+
+
+        gridLayout_11->addLayout(gridLayout_13, 3, 0, 1, 1);
+
+        gridLayout_14 = new QGridLayout();
+        gridLayout_14->setSpacing(6);
+        gridLayout_14->setObjectName(QStringLiteral("gridLayout_14"));
+        lineEdit_9 = new QLineEdit(gridLayoutWidget_5);
+        lineEdit_9->setObjectName(QStringLiteral("lineEdit_9"));
+
+        gridLayout_14->addWidget(lineEdit_9, 0, 1, 1, 1);
+
+        label_10 = new QLabel(gridLayoutWidget_5);
+        label_10->setObjectName(QStringLiteral("label_10"));
+
+        gridLayout_14->addWidget(label_10, 0, 0, 1, 1);
+
+
+        gridLayout_11->addLayout(gridLayout_14, 0, 0, 1, 1);
+
+        textEdit_3 = new QTextEdit(gridLayoutWidget_5);
+        textEdit_3->setObjectName(QStringLiteral("textEdit_3"));
+        textEdit_3->setEnabled(true);
+        textEdit_3->setMouseTracking(false);
+        textEdit_3->setReadOnly(true);
+        textEdit_3->setAcceptRichText(true);
+
+        gridLayout_11->addWidget(textEdit_3, 2, 0, 1, 1);
+
+        tabWidget->addTab(tab_2, QString());
 
         retranslateUi(textfinder);
+
+        tabWidget->setCurrentIndex(0);
+
 
         QMetaObject::connectSlotsByName(textfinder);
     } // setupUi
@@ -160,6 +263,12 @@ public:
         radioButton->setText(QApplication::translate("textfinder", "Oui", 0));
         label_3->setText(QApplication::translate("textfinder", "Casse :", 0));
         radioButton_2->setText(QApplication::translate("textfinder", "Non", 0));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("textfinder", "Recherche", 0));
+        label_7->setText(QApplication::translate("textfinder", "Remplacement", 0));
+        findButton_3->setText(QApplication::translate("textfinder", "Remplacer", 0));
+        label_8->setText(QApplication::translate("textfinder", "Occurence :", 0));
+        label_10->setText(QApplication::translate("textfinder", "Keyword", 0));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("textfinder", "Remplacer", 0));
     } // retranslateUi
 
 };
