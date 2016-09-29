@@ -11,6 +11,7 @@
 #include <QMessageBox>
 #include <QTextCharFormat>
 #include <QUiLoader>
+#include <QFileDialog>
 
 namespace Ui {
 class textfinder;
@@ -27,9 +28,11 @@ public:
 private:
     Ui::textfinder *ui;
     void loadTextFile();
+    void parcourir();
 
 private slots:
     void on_findButton_clicked();
+    void on_pushButton_clicked();
 };
 
 

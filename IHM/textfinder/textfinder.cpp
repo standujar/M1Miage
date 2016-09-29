@@ -6,15 +6,29 @@ textfinder::textfinder(QWidget *parent) :
     ui(new Ui::textfinder)
 {
     ui->setupUi(this);
-    loadTextFile();
 }
 
+void textfinder::parcourir()
+{
+    QFileDialog dialog(this);
+    dialog.setNameFilter(tr("Fichiers texte (*.txt);; Tous les fichiers (*.*)"));
+    dialog.setViewMode(QFileDialog::List);
+    dialog.setLabelText(QFileDialog::FileName, "Nom de fichier :");
+    dialog.setLabelText(QFileDialog::FileType, "Type de fichiers :");
+    dialog.setLabelText(QFileDialog::Accept, "Sélectionner");
+    dialog.setLabelText(QFileDialog::Reject, "Annuler");
 
+    QString fileNames = dialog.getOpenFileName();
+    ui->lineEdit_2->setText(fileNames);
+    textfinder::loadTextFile();
+    ui->findButton->setEnabled(true);
+
+}
 
 void textfinder::loadTextFile()
 {
-
-    QFile inputFile("input.txt");
+    QFile inputFile;
+    inputFile.setFileName(ui->lineEdit_2->text());
     inputFile.open(QIODevice::ReadOnly);
 
     QTextStream in(&inputFile);
@@ -24,7 +38,6 @@ void textfinder::loadTextFile()
 
     ui->textEdit->setPlainText(line);
     QTextCursor cursor = ui->textEdit->textCursor();
-
 }
 
 void textfinder::on_findButton_clicked()
@@ -41,12 +54,11 @@ void textfinder::on_findButton_clicked()
     if (searchString.isEmpty()) {
         QMessageBox::information(this, tr("Vous n'avez rien entré"), "Le champ de recherche est vide. Veuillez entrer un mot dans le champ.");
     }
-
     else
     {
         QTextCursor highlightCursor(document);
         QTextCursor cursor(document);
-
+        int occurence=0;
         cursor.beginEditBlock();
 
         QTextCharFormat plainFormat(highlightCursor.charFormat());
@@ -60,9 +72,10 @@ void textfinder::on_findButton_clicked()
                 found = true;
                 highlightCursor.movePosition(QTextCursor::WordRight, QTextCursor::KeepAnchor);
                 highlightCursor.mergeCharFormat(colorFormat);
+                occurence++;
             }
         }
-
+        ui->lineEdit_3->setText(QString::number(occurence));
         cursor.endEditBlock();
         isFirstTime = false;
 
@@ -73,6 +86,10 @@ void textfinder::on_findButton_clicked()
     }
 }
 
+void textfinder::on_pushButton_clicked()
+{
+    textfinder::parcourir();
+}
 
 textfinder::~textfinder()
 {
