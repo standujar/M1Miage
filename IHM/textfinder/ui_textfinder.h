@@ -183,6 +183,7 @@ public:
 
         lcdNumber = new QLCDNumber(tab);
         lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
+        lcdNumber->setSegmentStyle(QLCDNumber::Flat);
 
         gridLayout_2->addWidget(lcdNumber, 0, 1, 1, 1);
 
