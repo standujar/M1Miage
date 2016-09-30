@@ -12,6 +12,7 @@
 #include <QUiLoader>
 #include <QFileDialog>
 #include <QResource>
+#include <QLayout>
 
 namespace Ui {
 class textfinder;
@@ -35,6 +36,8 @@ private slots:
     void on_Parcourir_clicked();
     void on_Quitter_clicked();
     void on_Ok_1_clicked();
+    void on_lcdNumber_overflow();
+    void on_lcdNumber_2_overflow();
 };
 
 #endif // TEXTFINDER_H

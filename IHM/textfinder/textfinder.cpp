@@ -53,6 +53,7 @@ void textfinder::on_Recherche_clicked()
 
     bool isFirstTime = false;
     bool found = false;
+    bool sensitive = true;
 
     if (isFirstTime == false)
               document->undo();
@@ -71,33 +72,25 @@ void textfinder::on_Recherche_clicked()
         QTextCharFormat colorFormat = plainFormat;
         colorFormat.setForeground(Qt::red);
 
-        if(ui->radioButton->isChecked())
-        {
+        if(!ui->radioButton->isChecked()) sensitive = false;
+
             while (!highlightCursor.isNull() && !highlightCursor.atEnd()) {
-                highlightCursor = document->find(searchString, highlightCursor, QTextDocument::FindWholeWords);
+
+                if(sensitive == true) highlightCursor = document->find(searchString, highlightCursor, QTextDocument::FindWholeWords);
+                else highlightCursor = document->find(searchString, highlightCursor, QTextDocument::FindCaseSensitively);
 
                 if (!highlightCursor.isNull()) {
                     found = true;
-                    highlightCursor.movePosition(QTextCursor::WordRight, QTextCursor::KeepAnchor);
+
+                    if (sensitive == true) highlightCursor.movePosition(QTextCursor::WordRight, QTextCursor::KeepAnchor);
+
                     highlightCursor.mergeCharFormat(colorFormat);
+
                     occurence++;
                 }
             }
-        }
-        else
-        {
-            while (!highlightCursor.isNull() && !highlightCursor.atEnd()) {
-                highlightCursor = document->find(searchString, highlightCursor, QTextDocument::FindCaseSensitively);
 
-                if (!highlightCursor.isNull()) {
-                    found = true;
-                    highlightCursor.mergeCharFormat(colorFormat);
-                    occurence++;
-                }
-            }
-        }
-
-        ui->lineEdit_3->setText(QString::number(occurence));
+        ui->lcdNumber->display(occurence);
         cursor.endEditBlock();
         isFirstTime = false;
 
@@ -124,7 +117,7 @@ void textfinder::on_Ok_1_clicked()
         ui->Recherche->setEnabled(false);
         ui->textEdit->setText("");
         ui->textEdit_3->setText("");
-        ui->lineEdit_3->setText("");
+        ui->lcdNumber->display(0);
         QMessageBox::information(this, tr("Vous n'avez rien entré"), "Veuillez selectionner un chemin d'accès à votre fichier, ou le saisir.");
     }
     else
@@ -134,10 +127,24 @@ void textfinder::on_Ok_1_clicked()
     }
 }
 
+void textfinder::on_lcdNumber_overflow()
+{
+
+}
+
+void textfinder::on_lcdNumber_2_overflow()
+{
+
+}
+
 textfinder::~textfinder()
 {
     delete ui;
 }
+
+
+
+
 
 
 
