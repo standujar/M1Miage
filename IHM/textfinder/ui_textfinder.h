@@ -39,7 +39,7 @@ public:
     QGridLayout *gridLayout_4;
     QGridLayout *gridLayout_3;
     QLineEdit *lineEdit_2;
-    QPushButton *Ok_1;
+    QPushButton *Charger;
     QPushButton *Parcourir;
     QGridLayout *gridLayout;
     QPushButton *Recherche;
@@ -59,15 +59,15 @@ public:
     QGridLayout *gridLayout_11;
     QGridLayout *gridLayout_12;
     QLabel *label_7;
-    QLineEdit *lineEdit_7;
-    QPushButton *findButton_3;
+    QPushButton *Remplacer;
+    QLineEdit *lineEdit_9;
     QGridLayout *gridLayout_13;
     QLCDNumber *lcdNumber_2;
     QLabel *label_8;
     QSpacerItem *horizontalSpacer_3;
     QGridLayout *gridLayout_14;
-    QLineEdit *lineEdit_9;
     QLabel *label_10;
+    QLineEdit *lineEdit_7;
     QTextEdit *textEdit_3;
     QGridLayout *gridLayout_7;
     QSpacerItem *horizontalSpacer;
@@ -87,6 +87,8 @@ public:
         gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
         tabWidget = new QTabWidget(textfinder);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        tabWidget->setEnabled(true);
+        tabWidget->setMovable(true);
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
         verticalLayout_2 = new QVBoxLayout(tab);
@@ -104,10 +106,10 @@ public:
 
         gridLayout_3->addWidget(lineEdit_2, 0, 1, 1, 1);
 
-        Ok_1 = new QPushButton(tab);
-        Ok_1->setObjectName(QStringLiteral("Ok_1"));
+        Charger = new QPushButton(tab);
+        Charger->setObjectName(QStringLiteral("Charger"));
 
-        gridLayout_3->addWidget(Ok_1, 0, 2, 1, 1);
+        gridLayout_3->addWidget(Charger, 0, 2, 1, 1);
 
         Parcourir = new QPushButton(tab);
         Parcourir->setObjectName(QStringLiteral("Parcourir"));
@@ -169,7 +171,7 @@ public:
         textEdit->setAcceptDrops(true);
         textEdit->setReadOnly(true);
         textEdit->setAcceptRichText(true);
-        textEdit->setTextInteractionFlags(Qt::NoTextInteraction);
+        textEdit->setTextInteractionFlags(Qt::TextSelectableByMouse);
 
         gridLayout_4->addWidget(textEdit, 3, 0, 1, 1);
 
@@ -215,16 +217,16 @@ public:
 
         gridLayout_12->addWidget(label_7, 0, 0, 1, 1);
 
-        lineEdit_7 = new QLineEdit(tab_2);
-        lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
+        Remplacer = new QPushButton(tab_2);
+        Remplacer->setObjectName(QStringLiteral("Remplacer"));
+        Remplacer->setEnabled(true);
 
-        gridLayout_12->addWidget(lineEdit_7, 0, 1, 1, 1);
+        gridLayout_12->addWidget(Remplacer, 0, 2, 1, 1);
 
-        findButton_3 = new QPushButton(tab_2);
-        findButton_3->setObjectName(QStringLiteral("findButton_3"));
-        findButton_3->setEnabled(false);
+        lineEdit_9 = new QLineEdit(tab_2);
+        lineEdit_9->setObjectName(QStringLiteral("lineEdit_9"));
 
-        gridLayout_12->addWidget(findButton_3, 0, 2, 1, 1);
+        gridLayout_12->addWidget(lineEdit_9, 0, 1, 1, 1);
 
 
         gridLayout_11->addLayout(gridLayout_12, 1, 0, 1, 1);
@@ -254,15 +256,15 @@ public:
         gridLayout_14 = new QGridLayout();
         gridLayout_14->setSpacing(6);
         gridLayout_14->setObjectName(QStringLiteral("gridLayout_14"));
-        lineEdit_9 = new QLineEdit(tab_2);
-        lineEdit_9->setObjectName(QStringLiteral("lineEdit_9"));
-
-        gridLayout_14->addWidget(lineEdit_9, 0, 1, 1, 1);
-
         label_10 = new QLabel(tab_2);
         label_10->setObjectName(QStringLiteral("label_10"));
 
         gridLayout_14->addWidget(label_10, 0, 0, 1, 1);
+
+        lineEdit_7 = new QLineEdit(tab_2);
+        lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
+
+        gridLayout_14->addWidget(lineEdit_7, 0, 2, 1, 1);
 
 
         gridLayout_11->addLayout(gridLayout_14, 0, 0, 1, 1);
@@ -315,19 +317,19 @@ public:
     void retranslateUi(QWidget *textfinder)
     {
         textfinder->setWindowTitle(QApplication::translate("textfinder", "textfinder", 0));
-        Ok_1->setText(QApplication::translate("textfinder", "Ok", 0));
+        Charger->setText(QApplication::translate("textfinder", "Charger", 0));
         Parcourir->setText(QApplication::translate("textfinder", "Parcourir", 0));
         Recherche->setText(QApplication::translate("textfinder", "Rechercher", 0));
-        label->setText(QApplication::translate("textfinder", "  Keyword :", 0));
-        label_3->setText(QApplication::translate("textfinder", "  Mot entier :", 0));
+        label->setText(QApplication::translate("textfinder", "  Mot :", 0));
+        label_3->setText(QApplication::translate("textfinder", "  Sensible \303\240 la casse", 0));
         radioButton->setText(QApplication::translate("textfinder", "Oui", 0));
         radioButton_2->setText(QApplication::translate("textfinder", "Non", 0));
         label_2->setText(QApplication::translate("textfinder", "  Occurence :", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("textfinder", "Recherche", 0));
         label_7->setText(QApplication::translate("textfinder", "  Remplacement", 0));
-        findButton_3->setText(QApplication::translate("textfinder", "Remplacer", 0));
+        Remplacer->setText(QApplication::translate("textfinder", "Remplacer", 0));
         label_8->setText(QApplication::translate("textfinder", "  Occurence :", 0));
-        label_10->setText(QApplication::translate("textfinder", "  Keyword", 0));
+        label_10->setText(QApplication::translate("textfinder", "  Mot :", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("textfinder", "Remplacer", 0));
         Quitter->setText(QApplication::translate("textfinder", "Quitter", 0));
     } // retranslateUi
