@@ -30,7 +30,7 @@ public:
 private:
     Ui::textfinder *ui;
     void parcourir();
-    void loadTextFile();
+    void charger();
     void rechercher();
     void remplacer();
 
