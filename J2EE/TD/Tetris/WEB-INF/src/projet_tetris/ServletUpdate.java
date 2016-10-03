@@ -5,8 +5,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Vector;
 
@@ -23,13 +21,14 @@ public class ServletUpdate extends HttpServlet {
 	private DataSource ds;
 	Connection BD;
 	Vector<Joueur> resultat = null;
-	static int nbLignes;
+	static int nbLignes=0;
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
 		try{
 			// Récupération du flux d'entrée envoyé par l'applet
 			ObjectInputStream entree = new ObjectInputStream(request.getInputStream());
+			entree.read();
 			// Préparation du flux de sortie
 			ObjectOutputStream sortie = new ObjectOutputStream(response.getOutputStream());
 			// Execution de la requéte
@@ -42,7 +41,7 @@ public class ServletUpdate extends HttpServlet {
 		 }       
 	}
 	
-	public Vector<Joueur> ExecuterRequete()
+	synchronized Vector<Joueur> ExecuterRequete()
 	{
 		try
 		{
@@ -50,12 +49,11 @@ public class ServletUpdate extends HttpServlet {
 			BD=ds.getConnection();
 			Statement s = BD.createStatement();
 			//Déclaration d'un objet Joueur et d'un Vector pour stocker les 5 joueurs de la DB
-			Joueur mesJoueurs = new Joueur(null, 0, 0);
 			Vector<Joueur> resultat = new Vector<Joueur>();
 			ResultSet r = s.executeQuery("select * from score order by score desc limit 5");
 			
 			while(r.next()){
-				mesJoueurs = new Joueur(null, 0, 0);
+				Joueur mesJoueurs = new Joueur(null, 0, 0);
 				mesJoueurs.setNom(r.getString("nom")); 
 				mesJoueurs.setNiveau(r.getInt("niveau"));
 				mesJoueurs.setScore(r.getInt("score"));
@@ -70,7 +68,7 @@ public class ServletUpdate extends HttpServlet {
 			return resultat;
 		}
 		catch (java.sql.SQLException ex) {
-				System.out.println("Erreur d'exécution de la requéte SQL \n"+ex);
+				System.out.println("Erreur d'exécution de la requéte SQL (Update) \n"+ex);
 				return null;
 		}
 	}
@@ -85,7 +83,7 @@ public class ServletUpdate extends HttpServlet {
 	      this.ds = ((DataSource)envCtx.lookup("Tetris"));
 	    }
 	    catch (Exception er){
-	      System.out.println("Erreur de chargement du contexte " + er);
+	      System.out.println("Erreur de chargement du contexte (Update) " + er);
 	    }
 	  }
 	

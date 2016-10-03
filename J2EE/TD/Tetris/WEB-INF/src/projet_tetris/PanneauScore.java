@@ -24,7 +24,7 @@ import java.util.Vector;
 
 public class PanneauScore  extends JDialog
 {
-	Vector<Joueur> mesJoueurs;
+  Vector<Joueur> resultat=null;
 // Nombre de joueurs classés dans le panneau des meilleurs scores
   int NbJoueurs = 5;
   // Tableau contenant le nom des 5 meilleurs joueurs
@@ -212,12 +212,7 @@ public class PanneauScore  extends JDialog
       Attributs[i][1] = Attributs[i-1][1];
     }
   }
-  
 
-		
-		
-	
-  
   // Méthode permettant la mise à jour du panneau suite à la modification
   // des meilleurs joueurs
   public void MAJ_Panneau()
@@ -230,7 +225,7 @@ public class PanneauScore  extends JDialog
 	      ObjectOutputStream fluxsortie = new ObjectOutputStream(connexion.getOutputStream());
 	      fluxsortie.writeObject(null);
 	      ObjectInputStream fluxentree = new ObjectInputStream(connexion.getInputStream());
-	      Vector<Joueur> resultat=(Vector<Joueur>) fluxentree.readObject();
+	      resultat=(Vector<Joueur>) fluxentree.readObject();
 	      
 	      URL url2 = new URL("http://localhost:8080/Tetris/RecupTaille");
 	      URLConnection connexion2 = url2.openConnection();
@@ -241,14 +236,15 @@ public class PanneauScore  extends JDialog
 	      int staille= (int) fluxentree2.readObject();
 	      
 	 
-	       for (int j = 0; j < staille; j++){
-	        	BestJoueurs[j]= ((Joueur)resultat.get(j)).getNom();
-	        	Attributs[j][0] = ((Joueur)resultat.get(j)).getNiveau();
-		        Attributs[j][1] = ((Joueur)resultat.get(j)).getScore();
-		        
-		        this.LabelNom[j].setText(BestJoueurs[j]);
-		        this.LabelNiveau[j].setText(Integer.toString(Attributs[j][0]));
-		        this.LabelScore[j].setText(Integer.toString(Attributs[j][1]));
+	       for (int i = 0; i < staille; i++)
+	       {
+	    	   BestJoueurs[i] = resultat.get(i).getNom();
+	    	   Attributs[i][0] = resultat.get(i).getNiveau();
+	    	   Attributs[i][1] = resultat.get(i).getScore();
+	    	   
+		       this.LabelNom[i].setText(BestJoueurs[i]);
+		       this.LabelNiveau[i].setText(Integer.toString(Attributs[i][0]));
+		       this.LabelScore[i].setText(Integer.toString(Attributs[i][1]));
 	        }
 	    }
 	    catch (Exception sql)

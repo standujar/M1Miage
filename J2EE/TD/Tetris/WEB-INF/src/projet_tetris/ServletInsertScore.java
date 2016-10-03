@@ -27,51 +27,36 @@ public class ServletInsertScore extends HttpServlet {
 
 	
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		
-		try{
+
+	synchronized (nouveauJoueur){
+		try{	
 			// Récupération du flux d'entrée envoyé par l'applet
 			ObjectInputStream entree = new ObjectInputStream(request.getInputStream());
 			nouveauJoueur=(Joueur)entree.readObject();
 			// Préparation du flux de sortie
 			ObjectOutputStream sortie = new ObjectOutputStream(response.getOutputStream());
-			// Execution de la requète
-			ExecuterRequete();
-			
-			
 			sortie.writeObject(null);
+			
+			// Execution de la requète
+			BD=ds.getConnection();
+			Statement s = BD.createStatement();
+			//Déclaration d'un objet Joueur et d'un Vector pour stocker les 5 joueurs de la DB
+			System.out.println("Insertion "+nouveauJoueur.getNom()+" "+nouveauJoueur.getNiveau()+" "+nouveauJoueur.getScore());
+			ResultSet r=s.executeQuery("select id_joueur, min(score) AS minscore from score group by score");
+			r.next();
+			int val = r.getInt("id_joueur");
+			s.executeUpdate("UPDATE score SET nom='"+nouveauJoueur.getNom()+"', score='"+nouveauJoueur.getScore()+"', niveau='"+nouveauJoueur.getNiveau()+"' WHERE id_joueur="+val+"");	
+			r.close();
+			s.close();
+			BD.close();
+			s = null;
+			r = null;
 		}
-		 catch (Exception ex){
-		      System.out.println("Erreur d'exécution de la requète SQL (insert) : " + ex);
-		 }       
+		catch (Exception ex){
+			System.out.println("Erreur d'exécution de la requète SQL (insert) : " + ex);
+		}  
 	}
-
-synchronized void ExecuterRequete()
-{
-	try
-	{
-		// Exécution de la requète
-		BD=ds.getConnection();
-		Statement s = BD.createStatement();
-		//Déclaration d'un objet Joueur et d'un Vector pour stocker les 5 joueurs de la DB
-		System.out.println("Insertion "+nouveauJoueur.getNom()+" "+nouveauJoueur.getNiveau()+" "+nouveauJoueur.getScore());
-		ResultSet r=s.executeQuery("select id_joueur, min(score) AS minscore from score group by score");
-		
-		r.next();
-		int val = r.getInt("id_joueur");
-		
-		s.executeUpdate("UPDATE score SET nom='"+nouveauJoueur.getNom()+"', score='"+nouveauJoueur.getScore()+"', niveau='"+nouveauJoueur.getNiveau()+"' WHERE id_joueur="+val+"");	
-
-		r.close();
-		s.close();
-		BD.close();
-		s = null;
-		r = null;
-	
-
-	}
-	catch (java.sql.SQLException ex) {
-			System.out.println("Erreur d'exécution de la requète SQL \n"+ex);
-	}
+		     
 }
 	
 	public void init() throws ServletException{

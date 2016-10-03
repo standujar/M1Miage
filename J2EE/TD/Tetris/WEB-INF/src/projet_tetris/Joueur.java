@@ -7,7 +7,7 @@ public class Joueur implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-private String nom;
+  private String nom;
   private int niveau;
   private int score;
   
