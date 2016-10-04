@@ -5,14 +5,20 @@ textfinder::textfinder(QWidget *parent) : QWidget(parent), ui(new Ui::textfinder
 {
     ui->setupUi(this);
     setWindowIcon(QIcon(":/plus.png"));
-    setWindowTitle("Ma Fenêtre de TD2 d'IHM");
+    setWindowTitle("TextFinder++");
     ui->tabWidget->setTabEnabled(1, false);
+    ui->Suivant->hide();
+    QObject::connect(ui->lineEdit, SIGNAL(textChanged(QString)), this, SLOT(maj()));
+    QObject::connect(ui->lineEdit, SIGNAL(textChanged(QString)), this, SLOT(rechercher()));
+    QObject::connect(ui->lineEdit, SIGNAL(textChanged(QString)), this, SLOT(all()));
 }
 
 textfinder::~textfinder()
 {
     delete ui;
 }
+
+int temp = 0;
 
 
 void textfinder::parcourir()
@@ -41,11 +47,13 @@ void textfinder::parcourir()
 void textfinder::charger()
 {
     if (ui->lineEdit_2->text().isEmpty()) {
-        ui->Recherche->setEnabled(false);
+
         ui->tabWidget->setTabEnabled(1, false);
+
         ui->textEdit->setText("");
         ui->textEdit_3->setText("");
         ui->lcdNumber->display(0);
+
         QMessageBox::information(this, tr("Vous n'avez rien entré"), "Veuillez selectionner un chemin d'accès à votre fichier, ou le saisir.");
     }
     else
@@ -66,8 +74,51 @@ void textfinder::charger()
         {
           ui->tabWidget->setTabEnabled(1, true);
         }
-        ui->Recherche->setEnabled(true);
     }
+}
+
+void textfinder::all()
+{
+    QString searchString = ui->lineEdit->text();
+    QTextDocument *document = ui->textEdit->document();
+
+    bool isFirstTime = false;
+    bool sensitive = true;
+
+    if (isFirstTime == false) document->undo();
+
+    if(ui->lineEdit->text().isEmpty()) ui->Suivant->hide();
+
+    ui->Suivant->show();
+
+    QTextCursor compteur(document);
+    QTextCursor cursor(document);
+    int occurence=0;
+    cursor.beginEditBlock();
+
+    QTextCharFormat plainFormat(compteur.charFormat());
+    QTextCharFormat colorAll = plainFormat;
+    colorAll.setForeground(Qt::red);
+    colorAll.setBackground(Qt::yellow);
+
+    if(!ui->radioButton->isChecked()) sensitive = false;
+
+    while (!compteur.isNull() && !compteur.atEnd())
+    {
+        if (sensitive == true) compteur = document->find(searchString, compteur, QTextDocument::FindWholeWords);
+        else compteur = document->find(searchString, compteur, QTextDocument::FindCaseSensitively);
+
+        if (!compteur.isNull())
+        {
+            if (sensitive == true) compteur.movePosition(QTextCursor::EndOfWord, QTextCursor::KeepAnchor);
+            compteur.mergeCharFormat(colorAll);
+            occurence++;
+        }
+    }
+
+    ui->lcdNumber->display(occurence);
+    cursor.endEditBlock();
+    isFirstTime = false;
 }
 
 void textfinder::rechercher()
@@ -79,54 +130,48 @@ void textfinder::rechercher()
     bool found = false;
     bool sensitive = true;
 
-    if (isFirstTime == false)
-              document->undo();
 
-    if (searchString.isEmpty()) {
-        QMessageBox::information(this, tr("Vous n'avez rien entré"), "Le champ de recherche est vide. Veuillez entrer un mot dans le champ.");
-    }
-    else
-    {
+    if (isFirstTime == false) document->undo();
+
+        ui->Suivant->setEnabled(true);
+
         QTextCursor highlightCursor(document);
         QTextCursor cursor(document);
-        int occurence=0;
+        highlightCursor.setPosition(temp);
         cursor.beginEditBlock();
 
         QTextCharFormat plainFormat(highlightCursor.charFormat());
-        QTextCharFormat colorFormat = plainFormat;
-        colorFormat.setForeground(Qt::red);
+        QTextCharFormat colorAll = plainFormat;
+        colorAll.setForeground(Qt::red);
+        colorAll.setBackground(Qt::yellow);
 
         if(!ui->radioButton->isChecked()) sensitive = false;
 
-            while (!highlightCursor.isNull() && !highlightCursor.atEnd()) {
+        if (!highlightCursor.isNull() && !highlightCursor.atEnd()) {
 
-                if(sensitive == true) highlightCursor = document->find(searchString, highlightCursor, QTextDocument::FindWholeWords);
-                else highlightCursor = document->find(searchString, highlightCursor, QTextDocument::FindCaseSensitively);
+            if (sensitive == true) highlightCursor = document->find(searchString, highlightCursor, QTextDocument::FindWholeWords);
+            else highlightCursor = document->find(searchString, highlightCursor, QTextDocument::FindCaseSensitively);
 
-                if (!highlightCursor.isNull()) {
-                    found = true;
-
-                    if (sensitive == true) highlightCursor.movePosition(QTextCursor::WordRight, QTextCursor::KeepAnchor);
-
-                    highlightCursor.mergeCharFormat(colorFormat);
-
-                    occurence++;
-                }
+            if (!highlightCursor.isNull()) {
+                found = true;
+                if (sensitive == true) highlightCursor.movePosition(QTextCursor::EndOfWord, QTextCursor::KeepAnchor);
+                highlightCursor.mergeCharFormat(colorAll);
+                temp = highlightCursor.position();
             }
+        }
 
-        ui->lcdNumber->display(occurence);
         cursor.endEditBlock();
         isFirstTime = false;
 
         if (found == false) {
-            QMessageBox::information(this, tr("Mot non trouvé"),
-            "Aucun mot ne correspond à votre rechercher.");
+            temp=0;
+            ui->Suivant->setEnabled(false);
         }
-    }
 }
 
 void textfinder::remplacer()
 {
+
     QString searchString = ui->lineEdit_7->text();
     QString replace = ui->lineEdit_9->text();
     QTextDocument *document = ui->textEdit_3->document();
@@ -177,6 +222,14 @@ void textfinder::remplacer()
     }
 }
 
+void textfinder::maj()
+{
+    ui->Suivant->hide();
+    ui->lineEdit->setEnabled(true);
+    ui->textEdit->document()->undo();
+    temp=0;
+}
+
 
 void textfinder::on_Parcourir_clicked()
 {
@@ -188,9 +241,9 @@ void textfinder::on_Charger_clicked()
     textfinder::charger();
 }
 
-void textfinder::on_Recherche_clicked()
+void textfinder::on_Suivant_clicked()
 {
-   textfinder::rechercher();
+    textfinder::rechercher();
 }
 
 void textfinder::on_Remplacer_clicked()
@@ -203,6 +256,18 @@ void textfinder::on_Quitter_clicked()
     QApplication::quit();
 }
 
+
+void textfinder::on_radioButton_clicked()
+{
+    textfinder::all();
+}
+
+void textfinder::on_radioButton_2_clicked()
+{
+    textfinder::all();
+}
+
+
 void textfinder::on_lcdNumber_overflow()
 {
 
@@ -212,3 +277,6 @@ void textfinder::on_lcdNumber_2_overflow()
 {
 
 }
+
+
+
